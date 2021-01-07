@@ -108,6 +108,7 @@ const store = new Vuex.Store({
         state.ratings = JSON.parse(storage);
       }
 
+      this.commit("sortHistory");
     },
 
     saveRating (state) {
@@ -126,6 +127,12 @@ const store = new Vuex.Store({
         localStorage.setItem('movieRatings', JSON.stringify(state.ratings));
       }
 
+      this.commit("sortHistory");
+
+    },
+
+    sortHistory(state) {
+      state.ratings = state.ratings.sort((a, b) => a.timestamp < b.timestamp ? 1 : -1);
     },
 
     showHistory (state) {
