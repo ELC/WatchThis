@@ -88,7 +88,7 @@ const store = new Vuex.Store({
       // Try to get the highscores from local storage
       let storage = localStorage.getItem('movieRatings');
 
-      if (typeof(storage) !== 'undefined') {
+      if (typeof(storage) !== 'undefined' && storage !== null) {
         state.ratings = JSON.parse(storage);
       }
 
@@ -98,6 +98,7 @@ const store = new Vuex.Store({
       let rating = {
         userId: state.userName,
         movieId: state.movieId,
+        movieName: state.movieName,
         rating: state.rating,
         timestamp: Date.now()
       };

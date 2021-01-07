@@ -1,4 +1,4 @@
-let data = require('./top_movies.json')['data'];
+let data = require('../../public/top_movies.json')['data'];
 
 export default class WatchThisData {
 
