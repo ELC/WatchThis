@@ -14,6 +14,7 @@ const store = new Vuex.Store({
 
     // General game data
     userName: 'John Doe',
+    userReady: false,
     appReady: AppData.isReady(),
     ratings: [],
 
@@ -30,6 +31,21 @@ const store = new Vuex.Store({
       state.appStarted = true;
       this.commit('initHistory');
       this.commit('setNewMovie');
+    },
+
+    userReady(state, username){
+      state.userName = username;
+      state.userReady = true;
+      this.commit('appReady');
+    },
+
+    userNotReady(state){
+      state.userReady = false;
+      this.commit('appReady');
+    },
+
+    appReady(state){
+      state.appReady = AppData.isReady() && state.userReady;
     },
 
     stop (state) {
