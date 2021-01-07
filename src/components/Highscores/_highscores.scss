@@ -1,0 +1,14 @@
+#highscores {
+  z-index: 300;
+  overflow: auto;
+}
+
+.highscores-table {
+
+  &__wrapper {
+    margin: $spacer-4 0;
+  }
+}
+
+@import "Highscore/highscore";
+@import "HighscoresButtons/highscoresButtons";
