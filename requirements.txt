@@ -1,0 +1,3 @@
+git+https://github.com/ozgur/python-firebase
+pandas >= 1.1.3
+numpy >= 1.19.2

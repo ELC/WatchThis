@@ -1,0 +1,39 @@
+name: GenerateDataset
+
+on:
+  schedule:
+    - cron:  '*/5 * * * *'
+
+  workflow_dispatch:
+  repository_dispatch:
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+          architecture: 'x64'
+
+      - name: Install the library
+        run: pip install -r requirements.txt
+
+      - name: Get Data and Generate Files
+        run: python CreateDataset.py
+
+      - name: Update Results
+        run: |
+          git config --global user.name 'ELC'
+          git config --global user.email 'elcg@gmx.com'
+          git add -A
+          git commit --allow-empty -m "Dataset Updated - `date +'%Y-%m-%d %H:%M:%S'`"
+          git push
