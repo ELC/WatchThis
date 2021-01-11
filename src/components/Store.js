@@ -83,23 +83,19 @@ const store = new Vuex.Store({
 
       let skipWithoutDuplicates = new Set(skipIds.concat(state.visited));
 
-      if (skipWithoutDuplicates.length >= AppData.getLength() + 1){
-        return
-      }
-
-      state.nextMovie = AppData.getRandomMovie(Array.from(skipWithoutDuplicates.values()));
-
-      if (state.nextMovie === null){
-        let movie = {
+      if (skipWithoutDuplicates.size >= AppData.getLength()){
+        state.nextMovie = {
           "movieName": "You covered all our database :)",
           "movieYear": "",
           "movieId": "0",
           "movieImage": "https://www.actbus.net/fleetwiki/images/8/84/Noimage.jpg"
         };
 
-        state.nextMovie = movie;
-        state.allMoviesCovered = true;
+        return
       }
+
+      state.nextMovie = AppData.getRandomMovie(Array.from(skipWithoutDuplicates.values()));
+
     },
 
 
