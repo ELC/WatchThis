@@ -4,6 +4,7 @@
     <Menu/>
     <Game/>
     <Highscores/>
+    <Help/>
   </div>
 
 </template>
@@ -12,13 +13,15 @@
   import Menu from './components/Menu/Menu';
   import Game from './components/Game/Game';
   import Highscores from './components/Highscores/Highscores';
+  import Help from './components/Help/Help';
 
   export default {
     name: 'app',
     components: {
       Menu,
       Game,
-      Highscores
+      Highscores,
+      Help
     },
     mounted() {
       this.$store.commit('initHistory');

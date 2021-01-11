@@ -18,20 +18,13 @@ const store = new Vuex.Store({
     visited: [],
 
     // App states
-    showMainMenu: false,
+    showMainMenu: true,
     showHighscorePanel: false,
-    appStarted: false,
+    showHelp: false,
+    showGame: false,
   },
 
   mutations: {
-    // Start or stop the game
-    startGame (state) {
-      state.showMainMenu = true;
-      state.appStarted = true;
-      this.commit('initHistory');
-      this.commit('setNewMovie');
-    },
-
     userReady(state, username){
       state.userName = username;
       state.userReady = true;
@@ -48,10 +41,22 @@ const store = new Vuex.Store({
     },
 
     stop (state) {
-      state.appStarted = false;
+      state.showGame = false;
       this.commit('showMenu');
     },
 
+    showGame (state) {
+      state.showMainMenu = false;
+      state.showHighscorePanel = false;
+      state.showHelp = false;
+      state.showGame = true;
+    },
+
+    startGame (state) {
+      this.commit('showGame')
+      this.commit('initHistory');
+      this.commit('setNewMovie');
+    },
 
     // In-game mutations
     commitSuccess (state) {
@@ -101,9 +106,10 @@ const store = new Vuex.Store({
 
     // Global actions
     showMenu (state) {
-      state.appStarted = false;
-      state.showMainMenu = false;
+      state.showGame = false;
+      state.showMainMenu = true;
       state.showHighscorePanel = false;
+      state.showHelp = false;
 
       this.commit('resetAppState');
     },
@@ -157,11 +163,19 @@ const store = new Vuex.Store({
     },
 
     showHistory (state) {
-      state.appStarted = false;
+      state.showGame = false;
       state.showMainMenu = false;
       state.showHighscorePanel = true;
+      state.showHelp = false;
       this.commit('resetAppState');
     },
+
+    showHelp (state) {
+      state.showGame = true;
+      state.showMainMenu = false;
+      state.showHighscorePanel = false;
+      state.showHelp = true;
+    }
 
   }
 });

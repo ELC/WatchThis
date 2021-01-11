@@ -25,7 +25,13 @@
         </table>
       </div>
 
-      <HighscoresButtons :hasHighscores="hasHighscores"/>
+        <div class="highscores-buttons">
+
+    <button type="button" class="btn" id="highscores-back-to-menu" v-on:click="showMenu">
+      Back To Menu
+    </button>
+
+  </div>
 
     </div>
   </transition>
@@ -34,13 +40,11 @@
 
 <script>
   import Highscore from './Highscore/Highscore';
-  import HighscoresButtons from './HighscoresButtons/HighscoresButtons';
 
   export default {
     name: 'Highscores',
     components: {
-      Highscore,
-      HighscoresButtons
+      Highscore
     },
     computed: {
       showHighscorePanel () {
@@ -51,6 +55,11 @@
       },
       highscores: function () {
         return this.$store.state.ratings;
+      }
+    },
+    methods: {
+      showMenu () {
+        this.$store.commit('showMenu');
       }
     }
   };
