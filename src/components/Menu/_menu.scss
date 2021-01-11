@@ -2,19 +2,22 @@
   height: calc(100vh - #{$spacer * 6});
   overflow: auto;
   padding: $spacer;
-  background: $white;
+  background: #212121;
+  height: 100%;
+  display: flex;
 
   @media screen and (min-width: $screen-md) {
-    height: calc(100vh - #{$spacer * 2});
+    //height: calc(100vh - #{$spacer * 2});
+    height: 100%
   }
 }
 
 .menu__wrapper {
-  padding: $spacer;
+  padding: 0;//$spacer;
+  height: 100%;
 }
 
 @import "Logo/logo";
-@import "Disclaimer/disclaimer";
 @import "UserForm/userform";
 @import "MenuButtons/menubuttons";
 @import "MenuFooter/menuFooter";

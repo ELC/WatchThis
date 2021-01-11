@@ -5,11 +5,9 @@
       <div class="container">
 
         <Logo/>
-        <Disclaimer/>
         <UserForm/>
         <MenuButtons/>
-        <MenuFooter/>
-
+        
       </div>
     </div>
   </div>
@@ -18,7 +16,6 @@
 
 <script>
   import Logo from './Logo/Logo';
-  import Disclaimer from './Disclaimer/Disclaimer';
   import UserForm from './UserForm/UserForm';
   import MenuButtons from './MenuButtons/MenuButtons';
   import MenuFooter from './MenuFooter/MenuFooter';
@@ -27,7 +24,6 @@
     name: 'Menu',
     components: {
       Logo,
-      Disclaimer,
       UserForm,
       MenuButtons,
       MenuFooter

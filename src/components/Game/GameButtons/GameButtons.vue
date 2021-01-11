@@ -1,19 +1,19 @@
 <template>
   <div class="game-buttons">
 
-    <button type="button" class="btn btn--lg btn--fail game-button" id="game-fail"
+    <button type="button" class="btn game-button" id="game-fail"
       v-on:click="markFail" v-bind:disabled="!appStarted">
-      <img src="@/assets/cross.svg" alt="&cross;">
+      <img src="@/assets/dislike.png" alt="&cross;">
     </button>
 
-    <button type="button" class="btn btn--lg game-button" id="game-unknown"
+    <button type="button" class="btn game-button" id="game-unknown"
       v-on:click="markUnknown" v-bind:disabled="!appStarted">
-      <img src="@/assets/cross.svg" alt="&cross;">
+      <img src="@/assets/shrug.png" alt="&cross;">
     </button>
 
-    <button type="button" class="btn btn--lg btn--success game-button" id="game-success"
+    <button type="button" class="btn game-button" id="game-success"
       v-on:click="markSuccess" v-bind:disabled="!appStarted">
-      <img src="@/assets/check.svg" alt="&check;">
+      <img src="@/assets/like.png" alt="&check;">
     </button>
 
   </div>

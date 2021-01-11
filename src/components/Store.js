@@ -7,7 +7,7 @@ Vue.use(Vuex);
 // Create the game store
 const store = new Vuex.Store({
   state: {
-    movieImage: "https://i5.walmartimages.com/asr/9f50302f-a5d7-4ea1-bd68-a956191e9003_1.2336cbe0c9518fd2378eabe3f32bbb0f.jpeg",
+    movieImage: "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg",
     movieId: "",
     movieName: "",
     movieYear: "",

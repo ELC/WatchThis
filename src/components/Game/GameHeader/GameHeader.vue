@@ -1,8 +1,8 @@
 <template>
   <div class="game-header">
-    <button type="button" class="btn game-header__stop-btn" id="game-stop"
+    <button type="button" class="btn game-header__stop-btn" id="game-stop" style="background: transparent;"
       v-bind:disabled="!appStarted" v-on:click="stop">
-      <img src="@/assets/cross.svg" alt="X">
+      <img src="@/assets/back_arrow.png" alt="X">
     </button>
   </div>
 </template>

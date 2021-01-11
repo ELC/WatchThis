@@ -1,10 +1,11 @@
 .menu-buttons {
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: $spacer 0;
   text-align: center;
 
   .btn + .btn {
     margin-top: $spacer;
-    margin-left: $spacer;
   }
 }
