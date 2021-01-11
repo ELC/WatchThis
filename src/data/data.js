@@ -6,8 +6,24 @@ export default class WatchThisData {
     return data.length;
   };
 
-  static getRandom() {
-    return data[Math.floor(Math.random() * data.length)]
+  static getRandom(skipIds) {
+    var movie;
+    
+    do {
+      let index = Math.floor(Math.random() * data.length);     
+
+      movie = {
+        "movieName": data[index][1],
+        "movieYear": data[index][0],
+        "movieId": data[index][2],
+        "movieImage": data[index][3]
+      };
+
+    } while (skipIds.includes(movie.movieId));
+
+    new Image().src = movie.movieImage; // Preload Image
+
+    return movie
   };
 
   static getRecommended(user) {

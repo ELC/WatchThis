@@ -7,16 +7,15 @@ Vue.use(Vuex);
 // Create the game store
 const store = new Vuex.Store({
   state: {
-    movieImage: "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg",
-    movieId: "",
-    movieName: "",
-    movieYear: "",
+    nextMovie: AppData.getRandomMovie([]),
+    allMoviesCovered: false,
 
     // General game data
     userName: 'John Doe',
     userReady: false,
     appReady: AppData.isReady(),
     ratings: [],
+    visited: [],
 
     // App states
     showMainMenu: false,
@@ -69,12 +68,38 @@ const store = new Vuex.Store({
       this.commit('setNewMovie');
     },
 
-
     setNewMovie (state) {
-      let movieData = AppData.getRandomMovie();
-      state.movieName = movieData[1];
-      state.movieYear = movieData[0];
-      state.movieId = movieData[2];
+
+      state.movieName = state.nextMovie.movieName;
+      state.movieYear = state.nextMovie.movieYear;
+      state.movieId = state.nextMovie.movieId;
+      state.movieImage = state.nextMovie.movieImage;
+
+      let skipIds = state.ratings
+                    .filter(rating => rating.userId === state.userName)
+                    .map(rating => rating.movieId);
+
+      state.visited.push(state.movieId);
+
+      let skipWithoutDuplicates = new Set(skipIds.concat(state.visited));
+
+      if (skipWithoutDuplicates.length >= AppData.getLength() + 1){
+        return
+      }
+
+      state.nextMovie = AppData.getRandomMovie(Array.from(skipWithoutDuplicates.values()));
+
+      if (state.nextMovie === null){
+        let movie = {
+          "movieName": "You covered all our database :)",
+          "movieYear": "",
+          "movieId": "0",
+          "movieImage": "https://www.actbus.net/fleetwiki/images/8/84/Noimage.jpg"
+        };
+
+        state.nextMovie = movie;
+        state.allMoviesCovered = true;
+      }
     },
 
 

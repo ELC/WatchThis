@@ -3,22 +3,19 @@
 
   export default {
     name: 'AppData',
-    colors: [
-      {id: 'blue', value: '#1e88e5'},
-      {id: 'orange', value: '#fb8c00'},
-      {id: 'green', value: '#43a047'},
-      {id: 'teal', value: '#00acc1'},
-      {id: 'cyan', value: '#039be5'}
-    ],
-    getRandomMovie () {
-      return TabooData.getRandom();
+
+    getRandomMovie (skipIds) {
+      return TabooData.getRandom(skipIds);
     },
+
     getRecommended(user) {
       return TabooData.getRecommended(user);
     },
-    getColors () {
-      return this.colors;
+
+    getLength(){
+      return TabooData.getNumber();
     },
+
     isReady(){
       return TabooData.getNumber() !== 0;
     }

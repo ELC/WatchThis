@@ -13,16 +13,13 @@
     name: 'GameContent',
     computed: {
       getMovieImage () {
-        this.movieImage = this.$store.state.movieImage;
-        return this.movieImage;
+        return this.$store.state.nextMovie.movieImage;
       },
       getMovieName () {
-        this.movieName = this.$store.state.movieName;
-        return this.movieName;
+        return this.$store.state.nextMovie.movieName;
       },
       getMovieYear () {
-        this.movieYear = this.$store.state.movieYear;
-        return this.movieYear;
+        return this.$store.state.nextMovie.movieYear;
       }
     }
   };
