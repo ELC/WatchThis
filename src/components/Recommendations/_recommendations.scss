@@ -1,0 +1,85 @@
+#recommendations {
+  z-index: 3000;
+}
+
+.recommendations-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+  }
+  
+  .recommendations-header-btn {
+    display: flex;
+    width: auto;
+    height: 60%;
+    position: relative;
+    border: 0;
+    background: transparent;
+  
+    &:active, &:focus{
+      outline: none;
+    }
+  }
+  
+  .recommendations-header-images{
+    height: 100%;
+    width: auto;
+  }
+
+  .recommendations-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+  
+    &__headerimage {
+      width: auto;
+      max-height: 50vh;
+      border-radius: 5px;
+    }
+  
+    &__metadata {
+      height: 85px;
+      
+      h1{
+        font-size: 2rem;
+      }
+  
+      h2{
+        font-size: 1.5rem;
+      }
+    }
+  
+    &__title {
+      text-align: center;
+    }
+  
+    &__year {
+      text-align: center;
+    }
+  }
+
+.recommendations-text{
+    font-size: 1.5rem;
+    margin: 1rem 2rem;
+    margin-top: -2rem;
+}
+
+.recommendation-watch{
+    color: #7F0000;
+    font-size: 1.4rem;
+    text-decoration: underline;
+
+    &:visited{
+        color: #7F0000;
+    }
+
+  }
+
+.recommendation-rate{
+    font-size: 1.2rem;
+  }

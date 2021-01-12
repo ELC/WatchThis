@@ -22,6 +22,7 @@ const store = new Vuex.Store({
     showMainMenu: true,
     showHighscorePanel: false,
     showRate: false,
+    showRecommendations: false,
   },
 
   mutations: {
@@ -49,6 +50,7 @@ const store = new Vuex.Store({
       state.showMainMenu = false;
       state.showHighscorePanel = false;
       state.showRate = true;
+      state.showRecommendations = false;
     },
 
     startRate (state) {
@@ -108,6 +110,7 @@ const store = new Vuex.Store({
       state.showRate = false;
       state.showMainMenu = true;
       state.showHighscorePanel = false;
+      state.showRecommendations = false;
 
       this.commit('resetAppState');
     },
@@ -164,7 +167,15 @@ const store = new Vuex.Store({
       state.showRate = false;
       state.showMainMenu = false;
       state.showHighscorePanel = true;
+      state.showRecommendations = false;
       this.commit('resetAppState');
+    },
+
+    showRecommendations (state) {
+      state.showRate = false;
+      state.showMainMenu = false;
+      state.showHighscorePanel = false;
+      state.showRecommendations = true;
     }
 
   }

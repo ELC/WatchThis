@@ -4,6 +4,7 @@
     <Menu/>
     <Rate/>
     <Highscores/>
+    <Recommendations/>
   </div>
 
 </template>
@@ -12,6 +13,7 @@
   import Menu from './components/Menu/Menu';
   import Rate from './components/Rate/Rate';
   import Highscores from './components/Highscores/Highscores';
+  import Recommendations from './components/Recommendations/Recommendations';
 
   export default {
     name: 'app',
@@ -19,6 +21,7 @@
       Menu,
       Rate,
       Highscores,
+      Recommendations,
     },
     mounted() {
       this.$store.commit('initHistory');
