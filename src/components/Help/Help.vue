@@ -3,9 +3,9 @@
   <transition name="panel-active">
   <div id="help" class="panel" v-if="showHelp">
     
-    <div class="game-header">
-      <button type="button" class="btn game-header__stop-btn" id="game-stop" style="background: transparent;"
-        v-bind:disabled="!showHelp" v-on:click="showGame">
+    <div class="rate-header">
+      <button type="button" class="btn rate-header__stop-btn" id="rate-stop" style="background: transparent;"
+        v-bind:disabled="!showHelp" v-on:click="showRate">
         <img src="@/assets/back_arrow.png" alt="X">
       </button>
     </div>
@@ -25,8 +25,8 @@
       },
     },
     methods: {
-      showGame () {
-        this.$store.commit('showGame')
+      showRate () {
+        this.$store.commit('showRate')
       }
     }
   };

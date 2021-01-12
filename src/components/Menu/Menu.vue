@@ -17,7 +17,7 @@
       </div>
 
           <div class="menu-buttons">
-    <button type="button" class="btn btn--lg" id="start-game" v-bind:disabled="startDisabled" v-on:click="startGame">
+    <button type="button" class="btn btn--lg" id="start-rate" v-bind:disabled="startDisabled" v-on:click="startRate">
       Random Movie
     </button>
     <button type="button" class="btn btn--lg" id="show-highscores" v-on:click="showHistory">
@@ -61,8 +61,8 @@
           this.$store.commit('turnNotSet');
         }
       },
-       startGame () {
-        this.$store.commit('startGame');
+       startRate () {
+        this.$store.commit('startRate');
       },
       showHistory () {
         this.$store.commit('showHistory');

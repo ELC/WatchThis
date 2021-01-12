@@ -21,7 +21,7 @@ const store = new Vuex.Store({
     showMainMenu: true,
     showHighscorePanel: false,
     showHelp: false,
-    showGame: false,
+    showRate: false,
   },
 
   mutations: {
@@ -41,19 +41,19 @@ const store = new Vuex.Store({
     },
 
     stop (state) {
-      state.showGame = false;
+      state.showRate = false;
       this.commit('showMenu');
     },
 
-    showGame (state) {
+    showRate (state) {
       state.showMainMenu = false;
       state.showHighscorePanel = false;
       state.showHelp = false;
-      state.showGame = true;
+      state.showRate = true;
     },
 
-    startGame (state) {
-      this.commit('showGame')
+    startRate (state) {
+      this.commit('showRate')
       this.commit('initHistory');
       this.commit('setNewMovie');
     },
@@ -106,7 +106,7 @@ const store = new Vuex.Store({
 
     // Global actions
     showMenu (state) {
-      state.showGame = false;
+      state.showRate = false;
       state.showMainMenu = true;
       state.showHighscorePanel = false;
       state.showHelp = false;
@@ -163,7 +163,7 @@ const store = new Vuex.Store({
     },
 
     showHistory (state) {
-      state.showGame = false;
+      state.showRate = false;
       state.showMainMenu = false;
       state.showHighscorePanel = true;
       state.showHelp = false;
@@ -171,7 +171,7 @@ const store = new Vuex.Store({
     },
 
     showHelp (state) {
-      state.showGame = true;
+      state.showRate = true;
       state.showMainMenu = false;
       state.showHighscorePanel = false;
       state.showHelp = true;
