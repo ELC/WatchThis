@@ -36,6 +36,11 @@
     margin-bottom: $spacer-3;
     font-size: $font-size-lg;
     font-weight: $font-weight-bold;
+
+    small {
+      font-size: 0.7rem;
+      opacity: 0.65;
+    }
   }
 }
 

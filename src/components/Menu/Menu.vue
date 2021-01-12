@@ -10,7 +10,7 @@
         
           <div class="user-form">
         <div class="form__group">
-          <label for="user-name" class="user-form__label">Username</label>
+          <label for="user-name" class="user-form__label">Username <small>Reload to Change</small></label>
           <input type="text" class="form__input user-form__input" id="user-name" name="user-name"
             maxlength="30" :placeholder="userName" @keyup="processName">
         </div>
