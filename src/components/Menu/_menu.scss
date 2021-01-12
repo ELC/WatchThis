@@ -26,9 +26,10 @@
 
   &__label {
     display: block;
-    margin-bottom: 1rem;
-    font-size: 1.4rem;
-    font-weight: bold;
+    small {
+      font-size: 0.7rem;
+      opacity: 0.65;
+    }
   }
 }
 
