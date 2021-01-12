@@ -1,41 +1,40 @@
 #menu {
-  height: calc(100vh - #{$spacer * 6});
-  overflow: auto;
-  padding: $spacer;
-  background: #212121;
   height: 100%;
+  background: #212121;
   display: flex;
 
   @media screen and (min-width: $screen-md) {
-    //height: calc(100vh - #{$spacer * 2});
     height: 100%
   }
 }
 
 .menu__wrapper {
-  padding: 0;//$spacer;
   height: 100%;
 }
 
 .logo {
-
   text-align: center;
-  padding: 0 0 $spacer-4 0;
-
-  &__subline {
-    font-size: $font-size-lg;
-  }
+  padding: 0 0 1.5rem 0;
 }
 
 .user-form {
-
-  padding: $spacer-3 0;
+  width: 100%;
+  padding: 1rem 0;
 
   &__label {
     display: block;
-    margin-bottom: $spacer-3;
-    font-size: $font-size-lg;
-    font-weight: $font-weight-bold;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+}
+
+.user-form-input{
+  border-radius: 5px;
+  border: 0;
+
+  &:focus { 
+    outline: none !important;
   }
 }
 
@@ -43,10 +42,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: $spacer 0;
   text-align: center;
+  width: 100%;
+  height: 20%; 
+}
 
-  .btn + .btn {
-    margin-top: $spacer;
+.btn-menu {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  outline:none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: #7F0000;
+  padding: 1rem 1.5rem;
+  margin-top: 1.5rem;
+
+  &:active{
+    outline: none;
   }
+}
+
+.btn-menu + .btn-menu {
+  margin-top: 1.5rem;
 }
