@@ -26,7 +26,6 @@ body {
   left: 0;
   width: 100vw;
   z-index: 100;
-  padding: $spacer;
   background: #212121;
   transition: left $panel-anim-speed $panel-anim-timing;
 }

@@ -1,42 +1,31 @@
 #menu {
-  height: calc(100vh - #{$spacer * 6});
-  overflow: auto;
-  padding: $spacer;
-  background: #212121;
   height: 100%;
+  background: #212121;
   display: flex;
-
-  @media screen and (min-width: $screen-md) {
-    //height: calc(100vh - #{$spacer * 2});
-    height: 100%
-  }
 }
 
 .menu__wrapper {
-  padding: 0;//$spacer;
   height: 100%;
 }
 
 .logo {
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30%;
   text-align: center;
-  padding: 0 0 $spacer-4 0;
-
-  &__subline {
-    font-size: $font-size-lg;
-  }
 }
 
 .user-form {
-
-  padding: $spacer-3 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30%;
 
   &__label {
     display: block;
-    margin-bottom: $spacer-3;
-    font-size: $font-size-lg;
-    font-weight: $font-weight-bold;
-
     small {
       font-size: 0.7rem;
       opacity: 0.65;
@@ -44,14 +33,40 @@
   }
 }
 
+.user-form-input{
+  border-radius: 5px;
+  border: 0;
+
+  &:focus { 
+    outline: none !important;
+  }
+}
+
 .menu-buttons {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: $spacer 0;
-  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  height: 40%; 
+}
 
-  .btn + .btn {
-    margin-top: $spacer;
+.btn-menu {
+  width: 100%;
+  height: 30%;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  outline:none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: #7F0000;
+
+  &:active{
+    outline: none;
   }
+}
+
+.btn-menu + .btn-menu {
+  margin-top: 1.5rem;
 }

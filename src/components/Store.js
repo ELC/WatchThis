@@ -21,7 +21,6 @@ const store = new Vuex.Store({
     // App states
     showMainMenu: true,
     showHighscorePanel: false,
-    showHelp: false,
     showRate: false,
   },
 
@@ -49,7 +48,6 @@ const store = new Vuex.Store({
     showRate (state) {
       state.showMainMenu = false;
       state.showHighscorePanel = false;
-      state.showHelp = false;
       state.showRate = true;
     },
 
@@ -110,7 +108,6 @@ const store = new Vuex.Store({
       state.showRate = false;
       state.showMainMenu = true;
       state.showHighscorePanel = false;
-      state.showHelp = false;
 
       this.commit('resetAppState');
     },
@@ -167,15 +164,7 @@ const store = new Vuex.Store({
       state.showRate = false;
       state.showMainMenu = false;
       state.showHighscorePanel = true;
-      state.showHelp = false;
       this.commit('resetAppState');
-    },
-
-    showHelp (state) {
-      state.showRate = true;
-      state.showMainMenu = false;
-      state.showHighscorePanel = false;
-      state.showHelp = true;
     }
 
   }
