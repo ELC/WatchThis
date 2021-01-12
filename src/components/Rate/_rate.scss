@@ -56,6 +56,7 @@
   }
 
   &__metadata {
+    height: 85px;
     
     h1{
       font-size: 1.6rem;
@@ -81,28 +82,44 @@
 .rate-buttons {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   height: 20%;
+  max-width: 500px;
   width: 90%;
+  align-items: center;
 }
 
 .rate-button {
+  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30%;
   height: 70%;
   background: #7F0000 !important;
   border-radius: 20px;
   border: 0;
   outline: none;
+  margin: 0 10px;
+  box-sizing: border-box;
 
   &:active, &:focus{
     outline: none;
   }
+
+  &__not-watched{
+    font-size: 1.0rem;
+
+    @media screen and (min-width: $screen-sm) {
+      font-size: 1.3rem;
+    }
+
+    @media screen and (min-width: $screen-sm) {
+      font-size: 2rem;
+    }
+    
+  }
 }
 
 .rate-images{
-  width: 80%;
+  width: auto;
   height: 80%;
 }
