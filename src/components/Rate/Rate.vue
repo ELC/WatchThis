@@ -33,9 +33,9 @@
           <img src="@/assets/dislike.svg" alt="&cross;">
         </button>
 
-        <button type="button" class="btn rate-button" id="rate-unknown"
+        <button type="button" class="btn rate-button rate-button__not-watched" id="rate-unknown"
           v-on:click="markUnknown" v-bind:disabled="!showRate">
-          <img src="@/assets/shrug.png" alt="&cross;">
+          <span><strong>Not <br> Watched</strong></span>
         </button>
 
         <button type="button" class="btn rate-button" id="rate-success"
