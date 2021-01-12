@@ -1,67 +1,67 @@
 .btn {
-  display: inline-block;
-  width: auto;
-  height: auto;
-  border: 0;
-  cursor: pointer;
-  border-radius: 5px;
-  color: $btn-default-color;
-  padding: $btn-padding;
-  width: 100%;
-  font-size: $font-size-base;
-  background: #7F0000;
-
-  // States
-  &:hover,
-  &:focus {
-    @include bg-gradient(darken($btn-default-bg, $focus-modifier));
-  }
-
-  &:active {
-    @include bg-gradient(darken($btn-default-bg, $active-modifier));
-  }
-
-  &:disabled {
-    opacity: .7;
-    cursor: not-allowed;
-  }
-
-  // Size variants
-  &--lg {
-    padding: $btn-padding-lg;
-    font-size: $font-size-lg;
-  }
-
-  // Color variants
-  &--success {
-    @include bg-gradient($green);
-
-    &:hover,
-    &:focus {
-      @include bg-gradient(darken($green, $focus-modifier));
-    }
-
-    &:active {
-      @include bg-gradient(darken($green, $active-modifier));
-    }
-  }
-
-  &--fail {
-    @include bg-gradient($red);
-
-    &:hover,
-    &:focus {
-      @include bg-gradient(darken($red, $focus-modifier));
-    }
-
-    &:active {
-      @include bg-gradient(darken($red, $active-modifier));
-    }
-  }
-
-  // Buttons with icons in it
-  svg, img {
     display: inline-block;
-    max-width: 100%;
+    width: auto;
+    height: auto;
+    border: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    color: $btn-default-color;
+    padding: $btn-padding;
+    width: 100%;
+    font-size: $font-size-base;
+    background: #7F0000;
+  
+    // States
+    &:hover,
+    &:focus {
+      @include bg-gradient(darken($btn-default-bg, $focus-modifier));
+    }
+  
+    &:active {
+      @include bg-gradient(darken($btn-default-bg, $active-modifier));
+    }
+  
+    &:disabled {
+      opacity: .7;
+      cursor: not-allowed;
+    }
+  
+    // Size variants
+    &--lg {
+      padding: $btn-padding-lg;
+      font-size: $font-size-lg;
+    }
+  
+    // Color variants
+    &--success {
+      @include bg-gradient($green);
+  
+      &:hover,
+      &:focus {
+        @include bg-gradient(darken($green, $focus-modifier));
+      }
+  
+      &:active {
+        @include bg-gradient(darken($green, $active-modifier));
+      }
+    }
+  
+    &--fail {
+      @include bg-gradient($red);
+  
+      &:hover,
+      &:focus {
+        @include bg-gradient(darken($red, $focus-modifier));
+      }
+  
+      &:active {
+        @include bg-gradient(darken($red, $active-modifier));
+      }
+    }
+  
+    // Buttons with icons in it
+    svg, img {
+      display: inline-block;
+      max-width: 100%;
+    }
   }
-}
