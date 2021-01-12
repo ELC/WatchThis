@@ -1,23 +1,22 @@
 <script>
-  import TabooData from '../data/data';
+  import WatchThisData from '../data/data';
 
   export default {
     name: 'AppData',
-
     getRandomMovie (skipIds) {
-      return TabooData.getRandom(skipIds);
+      return WatchThisData.getRandom(skipIds);
     },
 
     getRecommended(user) {
-      return TabooData.getRecommended(user);
+      return WatchThisData.getRecommended(user);
     },
 
     getLength(){
-      return TabooData.getNumber();
+      return WatchThisData.getNumber();
     },
 
     isReady(){
-      return TabooData.getNumber() !== 0;
+      return WatchThisData.getNumber() !== 0;
     }
   };
 </script>
