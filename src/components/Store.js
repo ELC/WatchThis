@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import AppData from './AppData';
+import RandomUserName from '../data/randomUsername';
 
 Vue.use(Vuex);
 
@@ -11,7 +12,7 @@ const store = new Vuex.Store({
     allMoviesCovered: false,
 
     // General game data
-    userName: 'John Doe',
+    userName: RandomUserName.getRandomUserName(),
     userReady: false,
     appReady: AppData.isReady(),
     ratings: [],

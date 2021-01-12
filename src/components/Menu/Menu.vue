@@ -12,7 +12,7 @@
         <div class="form__group">
           <label for="user-name" class="user-form__label">Username</label>
           <input type="text" class="form__input user-form__input" id="user-name" name="user-name"
-            maxlength="30" placeholder="John Doe" @keyup="processName">
+            maxlength="30" :placeholder="userName" @keyup="processName">
         </div>
       </div>
 
@@ -36,6 +36,9 @@
   export default {
     name: 'Menu',
     computed: {
+      userName (){
+        return this.$store.state.userName;
+      },
       showHighscorePanel () {
         return this.$store.state.showHighscorePanel;
       },
