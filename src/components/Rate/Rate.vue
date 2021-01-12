@@ -30,7 +30,7 @@
 
         <button type="button" class="btn rate-button" id="rate-fail"
           v-on:click="markFail" v-bind:disabled="!showRate">
-          <img src="@/assets/dislike.png" alt="&cross;">
+          <img src="@/assets/dislike.svg" alt="&cross;">
         </button>
 
         <button type="button" class="btn rate-button" id="rate-unknown"
@@ -40,7 +40,7 @@
 
         <button type="button" class="btn rate-button" id="rate-success"
           v-on:click="markSuccess" v-bind:disabled="!showRate">
-          <img src="@/assets/like.png" alt="&check;">
+          <img src="@/assets/like.svg" alt="&check;">
         </button>
     </div>
 
