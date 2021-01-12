@@ -15,9 +15,9 @@
   height: 10%;
 }
 
-.header-btn {
+.rate-header-btn {
   display: flex;
-  width: 15%;
+  width: auto;
   height: 60%;
   position: relative;
   border: 0;
@@ -30,11 +30,11 @@
 
 .rate-header-images{
   height: 100%;
-  width: 100%;
+  width: auto;
 }
 
 #recommend-btn{
-  width: 25% !important;
+  width: auto;
   height: 90% !important;
 }
 
@@ -93,7 +93,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70%;
+  height: 58%;
   background: #7F0000 !important;
   border-radius: 20px;
   border: 0;

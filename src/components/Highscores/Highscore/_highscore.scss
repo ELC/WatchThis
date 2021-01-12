@@ -1,14 +1,14 @@
 .highscore {
-
-  &__score-success {
-    color: $green;
+  &__userId{
+    width: 20%;
+    padding: 0.5rem .6rem;
   }
-
-  &__score-fail {
-    color: $red;
+  &__movieName{
+    width: 50%;
+    padding: 0.5rem .3rem;
   }
-
-  &__date {
-    font-size: $font-size-sm;
+  &__rating{
+    width: 10%;
+    padding: 0.5rem .3rem;
   }
 }

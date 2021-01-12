@@ -8,22 +8,21 @@
           <h1 class="logo__headline">Watch This!</h1>
         </div>
         
-          <div class="user-form">
-        <div class="form__group">
-          <label for="user-name" class="user-form__label">Username <small>Reload to Change</small></label>
-          <input type="text" class="form__input user-form__input" id="user-name" name="user-name"
-            maxlength="30" :placeholder="userName" @keyup="processName">
+        <div class="user-form">
+          <div class="form__group">
+            <label for="user-name" class="user-form__label">Username</label>
+            <input type="text" class="form__input user-form__input" id="user-name" name="user-name"
+              maxlength="30" :placeholder="userName" @keyup="processName">
+          </div>
         </div>
-
-        <div class="menu-buttons">
-          <button type="button" class="btn-menu" v-bind:disabled="startDisabled" v-on:click="startRate">
-            Random Movie
-          </button>
-          <button type="button" class="btn-menu" v-on:click="showHistory">
-            History
-          </button>
-        </div>
-        
+          <div class="menu-buttons">
+            <button type="button" class="btn-menu" v-bind:disabled="startDisabled" v-on:click="startRate">
+              Random Movie
+            </button>
+            <button type="button" class="btn-menu" v-on:click="showHistory">
+              History
+            </button>
+          </div>
       </div>
     </div>
   </div>
@@ -63,7 +62,7 @@
           this.$store.commit('turnNotSet');
         }
       },
-       startRate () {
+      startRate () {
         this.$store.commit('startRate');
       },
       showHistory () {
