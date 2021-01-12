@@ -2,7 +2,7 @@
 
   <div id="app">
     <Menu/>
-    <Game/>
+    <Rate/>
     <Highscores/>
     <Help/>
   </div>
@@ -11,7 +11,7 @@
 
 <script>
   import Menu from './components/Menu/Menu';
-  import Game from './components/Game/Game';
+  import Rate from './components/Rate/Rate';
   import Highscores from './components/Highscores/Highscores';
   import Help from './components/Help/Help';
 
@@ -19,7 +19,7 @@
     name: 'app',
     components: {
       Menu,
-      Game,
+      Rate,
       Highscores,
       Help
     },
