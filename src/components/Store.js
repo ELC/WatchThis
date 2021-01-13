@@ -146,8 +146,6 @@ const store = new Vuex.Store({
         state.ratings = JSON.parse(storage);
       }
 
-      state.ratings = state.ratings.filter(rating => rating.userId === state.userName)
-
       this.commit("sortRatings");
     },
 
