@@ -8,12 +8,13 @@ Vue.use(Vuex);
 // Create the game store
 const store = new Vuex.Store({
   state: {
+    movie: AppData.getRandomMovie([]),
     nextMovie: AppData.getRandomMovie([]),
     allMoviesCovered: false,
 
     // General game data
     userName: RandomUserName.getRandomUserName(),
-    userReady: false,
+    userReady: true,
     appReady: AppData.isReady(),
     ratings: [],
     visited: [],
@@ -26,110 +27,119 @@ const store = new Vuex.Store({
   },
 
   mutations: {
-    userReady(state, username){
-      state.userName = username;
-      state.userReady = true;
-      this.commit('appReady');
-    },
 
-    userNotReady(state){
-      state.userReady = false;
-      this.commit('appReady');
-    },
+    // Global
 
     appReady(state){
       state.appReady = AppData.isReady() && state.userReady;
     },
 
-    stop (state) {
-      state.showRate = false;
-      this.commit('showMenu');
-    },
 
-    showRate (state) {
+    // Navigation
+    hideEverything (state){
+      state.showRate = false;
       state.showMainMenu = false;
       state.showHighscorePanel = false;
-      state.showRate = true;
       state.showRecommendations = false;
     },
+
+    showOnlyView (state, viewName) {
+      this.commit('hideEverything');
+      this.commit('showView', viewName)
+    },
+
+    showView (state, viewName) {
+      state[viewName] = true;
+    },
+
+
+    // Menu
+
+    showMenu (state) {
+      this.commit('showOnlyView', "showMainMenu");
+    },
+
+
+    updateUser(state, username){
+      state.userReady = username.length !== 0
+      
+      if (state.userReady){
+        state.userName = username;
+      }
+    },
+
+
+    // History
+    showHistory (state) {
+      this.commit('showOnlyView', "showHighscorePanel");
+    },
+
+
+    // Recommendation
+    showRecommendations (state) {
+      this.commit('showView', "showRecommendations");
+    },
+
+
+    // Rate
+
+    showRate (state) {
+      this.commit('showOnlyView', "showRate");
+    }, 
 
     startRate (state) {
       this.commit('showRate')
       this.commit('initHistory');
+    },
+
+    commitSuccess (state) {
+      this.commit("saveRating", 1);
       this.commit('setNewMovie');
     },
 
-    // In-game mutations
-    commitSuccess (state) {
-      state.rating = 1;
-      this.commit("saveRating");
-      this.commit('setNewMovie');
-    },
     commitUnknown (state) {
       this.commit('setNewMovie');
     },
+
     commitFail (state) {
-      state.rating = -1;
-      this.commit("saveRating");
+      this.commit("saveRating", -1);
       this.commit('setNewMovie');
     },
 
-    setNewMovie (state) {
 
-      state.movieName = state.nextMovie.movieName;
-      state.movieYear = state.nextMovie.movieYear;
-      state.movieId = state.nextMovie.movieId;
-      state.movieImage = state.nextMovie.movieImage;
+    setNewMovie (state) {
+      state.movie = state.nextMovie;
 
       let skipIds = state.ratings
                     .filter(rating => rating.userId === state.userName)
                     .map(rating => rating.movieId);
 
-      state.visited.push(state.movieId);
+      state.visited.push(state.movie.movieId);
 
       let skipWithoutDuplicates = new Set(skipIds.concat(state.visited));
 
-      if (skipWithoutDuplicates.size >= AppData.getLength()){
-        state.nextMovie = {
-          "movieName": "You covered all our database :)",
-          "movieYear": "",
-          "movieId": "0",
-          "movieImage": "https://www.actbus.net/fleetwiki/images/8/84/Noimage.jpg"
-        };
-
+      if (skipWithoutDuplicates.size < AppData.getLength()){
+        state.nextMovie = AppData.getRandomMovie(Array.from(skipWithoutDuplicates.values()));
         return
       }
 
-      state.nextMovie = AppData.getRandomMovie(Array.from(skipWithoutDuplicates.values()));
-
+      state.movie = {
+        "movieName": "You covered all our database :)",
+        "movieYear": "",
+        "movieId": "-1",
+        "movieImage": "https://www.actbus.net/fleetwiki/images/8/84/Noimage.jpg"
+      };
     },
 
+    
 
-    // Global actions
-    showMenu (state) {
-      state.showRate = false;
-      state.showMainMenu = true;
-      state.showHighscorePanel = false;
-      state.showRecommendations = false;
-
-      this.commit('resetAppState');
-    },
-
-    // End-game mutations
-    resetAppState (state) {
-      state.movieName = "";
-      state.movieYear = "";
-    },
-
-
-
-    // Highscore actions
+    // Ratings
+    
     initHistory(state) {
       if (state.ratings.length !== 0) {
         return
       }
 
-      // Try to get the highscores from local storage
       let storage = localStorage.getItem('movieRatings');
 
       if (typeof(storage) !== 'undefined' && storage !== null) {
@@ -139,17 +149,17 @@ const store = new Vuex.Store({
       this.commit("sortHistory");
     },
 
-    saveRating (state) {
+    saveRating (state, user_rating) {
       let rating = {
         userId: state.userName,
-        movieId: state.movieId,
-        movieName: state.movieName,
-        rating: state.rating,
+        movieId: state.movie.movieId,
+        movieName: state.movie.movieName,
+        rating: user_rating,
         timestamp: Date.now()
       };
 
       state.ratings.push(rating);
-      console.log(state.userName, state.movieId, state.rating)
+      console.log(state.userName, state.movie.movieId, user_rating)
 
       if (typeof(Storage) !== 'undefined') {
         localStorage.setItem('movieRatings', JSON.stringify(state.ratings));
@@ -161,21 +171,6 @@ const store = new Vuex.Store({
 
     sortHistory(state) {
       state.ratings = state.ratings.sort((a, b) => a.timestamp < b.timestamp ? 1 : -1);
-    },
-
-    showHistory (state) {
-      state.showRate = false;
-      state.showMainMenu = false;
-      state.showHighscorePanel = true;
-      state.showRecommendations = false;
-      this.commit('resetAppState');
-    },
-
-    showRecommendations (state) {
-      state.showRate = false;
-      state.showMainMenu = false;
-      state.showHighscorePanel = false;
-      state.showRecommendations = true;
     }
 
   }

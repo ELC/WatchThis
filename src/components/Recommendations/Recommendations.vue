@@ -45,13 +45,13 @@
         this.$store.commit('showRate')
       },
       getMovieImage () {
-        return this.$store.state.nextMovie.movieImage;
+        return this.$store.state.movie.movieImage;
       },
       getMovieName () {
-        return this.$store.state.nextMovie.movieName;
+        return this.$store.state.movie.movieName;
       },
       getMovieYear () {
-        return this.$store.state.nextMovie.movieYear;
+        return this.$store.state.movie.movieYear;
       }
     }
   };

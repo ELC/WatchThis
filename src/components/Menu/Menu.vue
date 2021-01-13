@@ -15,14 +15,16 @@
               maxlength="30" :placeholder="userName" @keyup="processName">
           </div>
         </div>
-          <div class="menu-buttons">
-            <button type="button" class="btn-menu" v-bind:disabled="startDisabled" v-on:click="startRate">
-              Random Movie
-            </button>
-            <button type="button" class="btn-menu" v-on:click="showHistory">
-              History
-            </button>
-          </div>
+
+        <div class="menu-buttons">
+          <button type="button" class="btn-menu" v-bind:disabled="startDisabled" v-on:click="startRate">
+            Random Movie
+          </button>
+          <button type="button" class="btn-menu" v-on:click="showHistory">
+            History
+          </button>
+        </div>
+        
       </div>
     </div>
   </div>
@@ -49,18 +51,7 @@
     },
     methods: {
       processName (e) {
-        if (e.target.value.length > 0) {
-          this.$store.commit('userReady', e.target.value);
-        } else {
-          this.$store.commit('userNotReady');
-        }
-      },
-      processTurnDuration (e) {
-        if (e.target.value.length > 0) {
-          this.$store.commit('turnDuration', e.target.value);
-        } else {
-          this.$store.commit('turnNotSet');
-        }
+        this.$store.commit('updateUser', e.target.value);
       },
       startRate () {
         this.$store.commit('startRate');

@@ -6,7 +6,7 @@
       <!-- HEADER -->
       <div class="rate-header">
 
-        <button type="button" class="rate-header-btn" v-bind:disabled="!showRate" v-on:click="stop">
+        <button type="button" class="rate-header-btn" v-bind:disabled="!showRate" v-on:click="showMenu">
           <img class="rate-header-images" src="@/assets/back_arrow.png">
         </button>
         
@@ -19,11 +19,11 @@
       <!-- CONTENT -->
       <div class="rate-content">
 
-        <img class="rate-content__headerimage" :src="getMovieImage">
+        <img class="rate-content__headerimage" :src="getMovie.movieImage">
         
         <div class="rate-content__metadata">
-          <h1 class="rate-content__title">{{ getMovieName }}</h1>
-          <h2 class="rate-content__year">{{ getMovieYear }}</h2>
+          <h1 class="rate-content__title">{{ getMovie.movieName }}</h1>
+          <h2 class="rate-content__year">{{ getMovie.movieYear }}</h2>
         </div>
 
       </div>
@@ -57,19 +57,13 @@
       showRate () {
         return this.$store.state.showRate;
       },
-      getMovieImage () {
-        return this.$store.state.nextMovie.movieImage;
+      getMovie () {
+        return this.$store.state.movie;
       },
-      getMovieName () {
-        return this.$store.state.nextMovie.movieName;
-      },
-      getMovieYear () {
-        return this.$store.state.nextMovie.movieYear;
-      }
     },
     methods: {
-      stop () {
-        this.$store.commit('stop');
+      showMenu () {
+        this.$store.commit('showMenu');
       },
       markSuccess () {
         this.$store.commit('commitSuccess');
