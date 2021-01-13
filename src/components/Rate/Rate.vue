@@ -10,6 +10,7 @@
           <img class="rate-header-images" src="@/assets/back_arrow.png">
         </button>
         
+        <Modal></Modal>
         <!-- <button type="button" class="rate-header-btn" id="recommend-btn" v-bind:disabled="!showRate" v-on:click="showRecommendations"> -->
         <button type="button" class="rate-header-btn" id="recommend-btn" 
         :class="{'recommend-disabled' : !recommendationsEnabled}"  v-on:click="showRecommendations">
@@ -53,8 +54,13 @@
 </template>
 
 <script>
+import Modal from './Modal/Modal';
+
   export default {
     name: 'Rate',
+    components:{
+      Modal,
+    },
     computed: {
       showRate () {
         return this.$store.state.showRate;
@@ -83,6 +89,8 @@
       showRecommendations () {
         if (this.recommendationsEnabled){
           this.$store.commit('showRecommendations');
+        } else {
+          this.$emit('openModal');
         }
       }
     }
