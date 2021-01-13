@@ -10,7 +10,9 @@
           <img class="rate-header-images" src="@/assets/back_arrow.png">
         </button>
         
-        <button type="button" class="rate-header-btn" id="recommend-btn" v-bind:disabled="!showRate" v-on:click="showRecommendations">
+        <!-- <button type="button" class="rate-header-btn" id="recommend-btn" v-bind:disabled="!showRate" v-on:click="showRecommendations"> -->
+        <button type="button" class="rate-header-btn" id="recommend-btn" 
+        :class="{'recommend-disabled' : !recommendationsEnabled}"  v-on:click="showRecommendations">
           <img class="rate-header-images" src="@/assets/recommend.png">
         </button>
 
@@ -65,6 +67,9 @@
       },
       getMovieYear () {
         return this.$store.state.nextMovie.movieYear;
+      },
+      recommendationsEnabled(){
+        return true;
       }
     },
     methods: {
@@ -81,7 +86,9 @@
         this.$store.commit('commitFail');
       },
       showRecommendations () {
-        this.$store.commit('showRecommendations');
+        if (this.recommendationsEnabled){
+          this.$store.commit('showRecommendations');
+        }
       }
     }
   };
