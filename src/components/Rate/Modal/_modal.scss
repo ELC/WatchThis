@@ -8,14 +8,20 @@
   width: 100vw;
   height: 100vh;
   backdrop-filter: blur(10px);
-}
 
-.modal.closed {
-  display: none;
-}
+  &.closed {
+    display: none;
+  }
+  
+  &.opened{
+    display: block;
+  }
 
-.modal.opened{
-  display: block;
+  &-text{
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
 }
 
 .card{
@@ -38,9 +44,4 @@
   font-size: 1.3rem;
   border: none;
   outline: none;
-}
-
-.modal-text{
-  margin: 0;
-  margin-bottom: 1rem;
 }

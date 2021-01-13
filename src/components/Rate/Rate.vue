@@ -10,7 +10,6 @@
           <img class="rate-header-images" src="@/assets/back_arrow.png">
         </button>
         
-        <Modal></Modal>
         <!-- <button type="button" class="rate-header-btn" id="recommend-btn" v-bind:disabled="!showRate" v-on:click="showRecommendations"> -->
         <button type="button" class="rate-header-btn" id="recommend-btn" 
         :class="{'recommend-disabled' : !recommendationsEnabled}"  v-on:click="showRecommendations">
@@ -30,6 +29,8 @@
         </div>
 
       </div>
+      
+      <Modal></Modal>
 
       <!-- BUTTONS -->
       <div class="rate-buttons">
@@ -69,7 +70,9 @@ import Modal from './Modal/Modal';
         return this.$store.state.movie;
       },
       recommendationsEnabled (){
-        return this.$store.state.ratings.filter(rating => rating.rating === 1).length >= 10;
+        let userRatings = this.$store.state.ratings.filter(rating => rating.userName === this.$store.state.userName);
+        let positiveRatings = userRatings.filter(rating => rating.rating === 1)
+        return positiveRatings.length >= 10;
       }
     },
     methods: {
