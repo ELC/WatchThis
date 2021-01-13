@@ -62,7 +62,7 @@
   font-weight: bold;
   background: #7F0000;
 
-  &:active{
+  &:active, &:focus{
     outline: none;
   }
 }

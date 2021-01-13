@@ -29,6 +29,8 @@
         </div>
 
       </div>
+      
+      <Modal></Modal>
 
       <!-- BUTTONS -->
       <div class="rate-buttons">
@@ -53,8 +55,13 @@
 </template>
 
 <script>
+import Modal from './Modal/Modal';
+
   export default {
     name: 'Rate',
+    components:{
+      Modal,
+    },
     computed: {
       showRate () {
         return this.$store.state.showRate;
@@ -63,7 +70,9 @@
         return this.$store.state.movie;
       },
       recommendationsEnabled (){
-        return this.$store.state.ratings.filter(rating => rating.rating === 1).length >= 10;
+        let userRatings = this.$store.state.ratings.filter(rating => rating.userName === this.$store.state.userName);
+        let positiveRatings = userRatings.filter(rating => rating.rating === 1)
+        return positiveRatings.length >= 10;
       }
     },
     methods: {
@@ -83,6 +92,8 @@
       showRecommendations () {
         if (this.recommendationsEnabled){
           this.$store.commit('showRecommendations');
+        } else {
+          this.$emit('openModal');
         }
       }
     }
