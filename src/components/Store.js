@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import AppData from './AppData';
 import RandomUserName from '../data/randomUsername';
+import {db} from '../firebase';
 
 Vue.use(Vuex);
 
@@ -146,9 +147,13 @@ const store = new Vuex.Store({
         state.ratings = JSON.parse(storage);
       }
 
-      state.ratings = state.ratings.filter(rating => rating.userId === state.userName)
+      state.ratings = state.ratings.filter(rating => rating.userId === state.userName);
 
       this.commit("sortRatings");
+    },
+
+    pushToDatabase(state, entry){
+      db.push(entry);
     },
 
     saveRating (state, user_rating) {
@@ -161,7 +166,10 @@ const store = new Vuex.Store({
       };
 
       state.ratings.push(rating);
-      console.log(state.userName, state.movie.movieId, user_rating)
+      console.log(state.userName, state.movie.movieId, user_rating);
+
+      this.commit("pushToDatabase", rating);
+
 
       if (typeof(Storage) !== 'undefined') {
         localStorage.setItem('movieRatings', JSON.stringify(state.ratings));
