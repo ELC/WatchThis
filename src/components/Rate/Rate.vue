@@ -70,7 +70,7 @@ import Modal from './Modal/Modal';
         return this.$store.state.movie;
       },
       recommendationsEnabled (){
-        let userRatings = this.$store.state.ratings.filter(rating => rating.userName === this.$store.state.userName);
+        let userRatings = this.$store.state.ratings.filter(rating => rating.userId === this.$store.state.userName);
         let positiveRatings = userRatings.filter(rating => rating.rating === 1)
         return positiveRatings.length >= 10;
       }
