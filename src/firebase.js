@@ -16,4 +16,4 @@ const config = {
 firebase.initializeApp(config);
 firebase.auth().signInAnonymously();
 
-export const db = firebase.database().ref('ratings');
+export const db = firebase.database();

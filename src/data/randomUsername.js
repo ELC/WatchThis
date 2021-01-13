@@ -6,7 +6,7 @@ let names = require('../../public/names.json');
 export default class RandomUserName {
     
     static getRandomUserName() {
-        var username
+        var username = "";
         var adecuateAdjectives = adjectives
                                   .filter(word => word.length >= 9)
                                   .filter(word => word.includes("-"));
