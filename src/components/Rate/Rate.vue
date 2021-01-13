@@ -63,7 +63,7 @@
         return this.$store.state.movie;
       },
       recommendationsEnabled (){
-        return true;
+        return this.$store.state.ratings.filter(rating => rating.rating === 1).length >= 10;
       }
     },
     methods: {
