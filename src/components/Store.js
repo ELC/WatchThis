@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import AppData from './AppData';
 import RandomUserName from '../data/randomUsername';
+import {db} from '../firebase';
 
 Vue.use(Vuex);
 
@@ -65,6 +66,7 @@ const store = new Vuex.Store({
       
       if (state.userReady){
         state.userName = username;
+        this.commit("loadRatings");
       }
     },
 
@@ -134,20 +136,38 @@ const store = new Vuex.Store({
     
 
     // Ratings
+
+    // Database Interaction
+    pushToDatabase(state, entry){
+      db.ref("ratings").push(entry);
+    },
+
+    loadRatings(state){
+      db.ref("ratings/").on("value", snapshot => this.commit("updateRatings", snapshot.toJSON()));
+    },
+
+    updateRatings(state, globalRatings){
+      Object.entries(globalRatings)
+              .map(entry => entry[1])
+              .filter(rating => rating.userId == state.userName)
+              .forEach(userRating => state.ratings.push(userRating));
+
+      this.commit("sortCleanRatings");
+      this.commit("storeLocalRatings");
+    },
+
     
+    // Initialize local database and sync with cloud
     initRatings(state) {
       if (state.ratings.length !== 0) {
         return
       }
 
-      let storage = localStorage.getItem('movieRatings');
-
-      if (typeof(storage) !== 'undefined' && storage !== null) {
-        state.ratings = JSON.parse(storage);
-      }
-
-      this.commit("sortRatings");
+      this.commit("readLocalRatings");
+      this.commit("loadRatings");
+      this.commit("sortCleanRatings");
     },
+
 
     saveRating (state, user_rating) {
       let rating = {
@@ -159,17 +179,33 @@ const store = new Vuex.Store({
       };
 
       state.ratings.push(rating);
-      console.log(state.userName, state.movie.movieId, user_rating)
+      console.log(state.userName, state.movie.movieId, user_rating);
 
-      if (typeof(Storage) !== 'undefined') {
-        localStorage.setItem('movieRatings', JSON.stringify(state.ratings));
-      }
-
-      this.commit("sortRatings");
+      this.commit("sortCleanRatings");
+      this.commit("storeLocalRatings");
+      this.commit("pushToDatabase", rating);
 
     },
 
-    sortRatings(state) {
+    storeLocalRatings(state){
+      if (typeof(Storage) !== 'undefined') {
+        localStorage.setItem('movieRatings', JSON.stringify(state.ratings));
+      }
+    },
+
+    readLocalRatings(state){
+      let storage = localStorage.getItem('movieRatings');
+
+      if (typeof(storage) !== 'undefined' && storage !== null) {
+        state.ratings = JSON.parse(storage);
+      }
+    },
+
+    sortCleanRatings(state) {
+      state.ratings = state.ratings.filter((value, index, self) => {
+                                      let timestamps = self.map(rating => rating.timestamp);
+                                      return timestamps.indexOf(value.timestamp) === index
+                                    });
       state.ratings = state.ratings.sort((a, b) => a.timestamp < b.timestamp ? 1 : -1);
     }
 
