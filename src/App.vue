@@ -3,7 +3,7 @@
   <div id="app">
     <Menu/>
     <Rate/>
-    <Highscores/>
+    <Ratings/>
     <Recommendations/>
   </div>
 
@@ -12,7 +12,7 @@
 <script>
   import Menu from './components/Menu/Menu';
   import Rate from './components/Rate/Rate';
-  import Highscores from './components/Highscores/Highscores';
+  import Ratings from './components/Ratings/Ratings';
   import Recommendations from './components/Recommendations/Recommendations';
 
   export default {
@@ -20,11 +20,11 @@
     components: {
       Menu,
       Rate,
-      Highscores,
+      Ratings,
       Recommendations,
     },
     mounted() {
-      this.$store.commit('initHistory');
+      this.$store.commit('initRatings');
     }
   };
 </script>

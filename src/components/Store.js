@@ -21,7 +21,7 @@ const store = new Vuex.Store({
 
     // App states
     showMainMenu: true,
-    showHighscorePanel: false,
+    showRatingPanel: false,
     showRate: false,
     showRecommendations: false,
   },
@@ -39,7 +39,7 @@ const store = new Vuex.Store({
     hideEverything (state){
       state.showRate = false;
       state.showMainMenu = false;
-      state.showHighscorePanel = false;
+      state.showRatingPanel = false;
       state.showRecommendations = false;
     },
 
@@ -69,9 +69,9 @@ const store = new Vuex.Store({
     },
 
 
-    // History
-    showHistory (state) {
-      this.commit('showOnlyView', "showHighscorePanel");
+    // Ratings
+    showRatings (state) {
+      this.commit('showOnlyView', "showRatingPanel");
     },
 
 
@@ -89,7 +89,7 @@ const store = new Vuex.Store({
 
     startRate (state) {
       this.commit('showRate')
-      this.commit('initHistory');
+      this.commit('initRatings');
     },
 
     commitSuccess (state) {
@@ -135,7 +135,7 @@ const store = new Vuex.Store({
 
     // Ratings
     
-    initHistory(state) {
+    initRatings(state) {
       if (state.ratings.length !== 0) {
         return
       }
@@ -146,7 +146,7 @@ const store = new Vuex.Store({
         state.ratings = JSON.parse(storage);
       }
 
-      this.commit("sortHistory");
+      this.commit("sortRatings");
     },
 
     saveRating (state, user_rating) {
@@ -165,11 +165,11 @@ const store = new Vuex.Store({
         localStorage.setItem('movieRatings', JSON.stringify(state.ratings));
       }
 
-      this.commit("sortHistory");
+      this.commit("sortRatings");
 
     },
 
-    sortHistory(state) {
+    sortRatings(state) {
       state.ratings = state.ratings.sort((a, b) => a.timestamp < b.timestamp ? 1 : -1);
     }
 

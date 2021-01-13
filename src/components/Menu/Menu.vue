@@ -20,7 +20,7 @@
           <button type="button" class="btn-menu" v-bind:disabled="startDisabled" v-on:click="startRate">
             Random Movie
           </button>
-          <button type="button" class="btn-menu" v-on:click="showHistory">
+          <button type="button" class="btn-menu" v-on:click="showRatings">
             History
           </button>
         </div>
@@ -56,8 +56,8 @@
       startRate () {
         this.$store.commit('startRate');
       },
-      showHistory () {
-        this.$store.commit('showHistory');
+      showRatings () {
+        this.$store.commit('showRatings');
       }
     }
   };

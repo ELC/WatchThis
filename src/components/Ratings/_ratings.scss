@@ -1,0 +1,58 @@
+#ratings {
+  z-index: 300;
+  overflow: auto;
+}
+
+// HEADER
+
+.rating {
+
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+  }
+
+  &-header-btn {
+    display: flex;
+    width: auto;
+    height: 60%;
+    position: relative;
+    border: 0;
+    background: transparent;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &-header-images {
+    height: 100%;
+    width: 100%;
+  }
+
+  &-warning {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 40%;
+    width: 90%;
+    background: #7F0000;
+    border-radius: 10px;
+  }
+}
+
+.ratings-table {
+
+  &__wrapper {
+    margin: $spacer-4 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@import "rating/rating";
