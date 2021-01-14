@@ -5,8 +5,6 @@
     
             <p class="modal-text">Keep Rating to Unlock Recommendations!</p>
     
-            <small>Touch to continue rating</small>
-    
         </div>
     
     </div>
