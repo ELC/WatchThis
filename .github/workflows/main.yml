@@ -27,8 +27,11 @@ jobs:
       - name: Install the library
         run: pip install -r requirements.txt
 
+      - name: Convert Notebook to Script
+        run: python -m nbconvert --to script notebooks/*.ipynb
+
       - name: Get Data and Generate Files
-        run: python CreateDataset.py
+        run: python notebooks/CreateDataset.py
 
       - name: Update Results
         run: |
