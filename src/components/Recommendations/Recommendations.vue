@@ -19,11 +19,15 @@
           <h1 class="recommendations-content__title">Ratatouille</h1>
           <h2 class="recommendations-content__year">2007</h2>
         </div>
+      </div>
 
-        <a class="recommendation-watch" target="blank" href="https://movies.disney.com/ratatouille">Watch here!</a>
-
-        <p class="recommendation-rate" v-on:click="showRate">Already watch it? Rate it here!</p>
-
+      <div class="recommendations-buttons">
+          <button type="button" class="recommendations-button" v-bind:disabled="!showRecommendations" v-on:click="rateThisMovie">
+            Already watched? Rate it!
+          </button>
+          <button type="button" class="recommendations-button" v-bind:disabled="!showRecommendations" v-on:click="recommendNextMovie">
+            Recommend another!
+          </button>
       </div>
 
     </div>
@@ -52,6 +56,12 @@
       },
       getMovieYear () {
         return this.$store.state.movie.movieYear;
+      },
+      recommendNextMovie (){
+
+      },
+      rateThisMovie (){
+        
       }
     }
   };

@@ -36,7 +36,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 90%;
+    height: 70%;
 
     &__headerimage {
       width: auto;
@@ -68,21 +68,47 @@
   &-text {
     font-size: 1.5rem;
     margin: 1rem 2rem;
-    margin-top: -2rem;
   }
 }
 
-.recommendation-watch {
-  color: #7F0000;
-  font-size: 1.4rem;
-  text-decoration: underline;
-
-  &:visited {
-    color: #7F0000;
-  }
-
-  &-rate {
-    font-size: 1.2rem;
-  }
+.recommendations-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 20%;
 }
 
+.recommendations-button {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 58%;
+  background: #7F0000 !important;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 20px;
+  border: 0;
+  outline: none;
+  margin: 0 10px;
+  box-sizing: border-box;
+
+  &:active, &:focus{
+    outline: none;
+  }
+
+  &__not-watched{
+    font-size: 1.0rem;
+
+    @media screen and (min-width: $screen-sm) {
+      font-size: 1.3rem;
+    }
+
+    @media screen and (min-width: $screen-sm) {
+      font-size: 2rem;
+    }
+    
+  }
+}
