@@ -3,7 +3,7 @@ name: Build Vue
 on:
   push:
     branches:
-      - master
+      - website-source
 
 jobs:
   build_vue:
