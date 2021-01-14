@@ -122,7 +122,7 @@ const store = new Vuex.Store({
 
       if (skipWithoutDuplicates.size < AppData.getLength()){
         state.nextMovie = AppData.getRandomMovie(Array.from(skipWithoutDuplicates.values()));
-        return
+        return;
       }
 
       state.movie = {
@@ -143,13 +143,22 @@ const store = new Vuex.Store({
     },
 
     loadRatings(state){
-      db.ref("ratings/").on("value", snapshot => this.commit("updateRatings", snapshot.toJSON()));
+      db.ref("ratings/")
+        .orderByChild("userId")
+        .equalTo(state.userName)
+        .on("value", snapshot => this.commit("updateRatings", snapshot.toJSON()));
     },
 
     updateRatings(state, globalRatings){
+
+      if (globalRatings === null){
+        return;
+      }
+
+      console.log(Object.entries(globalRatings).length)
+
       Object.entries(globalRatings)
               .map(entry => entry[1])
-              .filter(rating => rating.userId == state.userName)
               .forEach(userRating => state.ratings.push(userRating));
 
       this.commit("sortCleanRatings");
@@ -160,7 +169,7 @@ const store = new Vuex.Store({
     // Initialize local database and sync with cloud
     initRatings(state) {
       if (state.ratings.length !== 0) {
-        return
+        return;
       }
 
       this.commit("readLocalRatings");
@@ -204,7 +213,7 @@ const store = new Vuex.Store({
     sortCleanRatings(state) {
       state.ratings = state.ratings.filter((value, index, self) => {
                                       let timestamps = self.map(rating => rating.timestamp);
-                                      return timestamps.indexOf(value.timestamp) === index
+                                      return timestamps.indexOf(value.timestamp) === index;
                                     });
       state.ratings = state.ratings.sort((a, b) => a.timestamp < b.timestamp ? 1 : -1);
     }
