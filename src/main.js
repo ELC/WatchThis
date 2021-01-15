@@ -6,7 +6,7 @@ import 'es6-promise/auto';
 
 const VueFire = require('vuefire')
  
-Vue.use(VueFire)
+Vue.use(VueFire);
 
 // Config
 Vue.config.productionTip = false;

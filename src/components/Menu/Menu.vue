@@ -10,9 +10,10 @@
         
         <div class="user-form">
           <div class="form__group">
-            <label for="user-name" class="user-form__label">Username</label>
-            <input type="text" class="form__input user-form__input" id="user-name" name="user-name"
-              maxlength="30" :placeholder="userName" @keyup="processName">
+            <label class="user-form__label">Username</label>
+            <!-- <input type="text" class="form__input user-form__input" id="user-name" name="user-name" maxlength="30" :placeholder="userName" @keyup="processName"> -->
+            <Dropdown :options="localUsers" v-on:selected="validateSelection" :name="userName" :placeholder="userName" v-on:filter="processName">
+          </Dropdown>
           </div>
         </div>
 
@@ -32,8 +33,14 @@
 </template>
 
 <script>
+
+import Dropdown from 'vue-simple-search-dropdown';
+
   export default {
     name: 'Menu',
+    components: {
+      Dropdown,
+    },
     computed: {
       userName (){
         return this.$store.state.userName;
@@ -46,17 +53,29 @@
       },
       startDisabled () {
         return !this.$store.state.appReady;
+      },
+      localUsers (){
+        let options = [];
+        let uniqueUsers = [...new Set(this.$store.state.ratings.map(rating => rating.userId))];
+
+        uniqueUsers.map(userName => options.push({id: uniqueUsers.indexOf(userName), 
+                                                     name: userName}));
+
+        return options;
       }
     },
     methods: {
-      processName (e) {
-        this.$store.commit('updateUser', e.target.value);
+      processName (userName) {
+        this.$store.commit('updateUser', userName);
       },
       startRate () {
         this.$store.commit('startRate');
       },
       showRatings () {
         this.$store.commit('showRatings');
+      },
+      validateSelection (selection){
+        this.$store.commit('updateUser', selection.name);
       }
     }
   };

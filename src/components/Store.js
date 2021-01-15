@@ -62,7 +62,11 @@ const store = new Vuex.Store({
 
 
     updateUser(state, username){
-      state.userReady = username.length !== 0
+      if (typeof(username) === 'undefined'){
+        return;
+      }
+      
+      state.userReady = username.length !== 0;
       
       if (state.userReady){
         state.userName = username;
@@ -217,7 +221,6 @@ const store = new Vuex.Store({
                                     });
       state.ratings = state.ratings.sort((a, b) => a.timestamp < b.timestamp ? 1 : -1);
     }
-
   }
 });
 
