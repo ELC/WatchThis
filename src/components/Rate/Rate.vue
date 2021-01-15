@@ -30,7 +30,7 @@
 
       </div>
       
-      <Modal></Modal>
+      <Modal message="Keep Rating to Level Up and Unlock Recommendations!"></Modal>
 
       <!-- BUTTONS -->
       <div class="rate-buttons">
@@ -55,7 +55,7 @@
 </template>
 
 <script>
-import Modal from './Modal/Modal';
+import Modal from '../Modal/Modal';
 
   export default {
     name: 'Rate',

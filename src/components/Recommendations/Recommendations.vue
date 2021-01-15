@@ -9,7 +9,10 @@
         </button>
       </div>
 
-      <div class="recommendations-content">
+
+      <Modal message="Keep Rating to Unlock More Recommendations Tomorrow"></Modal>
+
+      <div class="recommendations-content" v-if="getMovie.movieId !== -1">
 
         <h2 class="recommendations-text">We recommend you</h2>
 
@@ -21,7 +24,7 @@
         </div>
       </div>
 
-      <div class="recommendations-buttons">
+      <div class="recommendations-buttons" v-if="getMovie.movieId !== -1">
           <button type="button" class="recommendations-button" v-bind:disabled="!showRecommendations" v-on:click="rateThisMovie">
             Already watched? Rate it!
           </button>
@@ -36,9 +39,13 @@
 </template>
 
 <script>
+import Modal from '../Modal/Modal';
 
   export default {
     name: 'Recommendations',
+    components:{
+      Modal,
+    },
     computed: {
       showRecommendations () {
         return this.$store.state.showRecommendations
@@ -47,12 +54,16 @@
         return this.$store.state.nextRecommendation;
       },
     },
+
     methods: {
       showRate () {
         this.$store.commit('showRate');
       },
       recommendNextMovie (){
         this.$store.commit('nextRecommendation')
+        if (this.$store.state.nextRecommendation.movieId === -1){
+          this.$emit('openModal');
+        }
       },
       rateThisMovie (){
         this.$store.commit('rateMovie', this.getMovie);
