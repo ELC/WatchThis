@@ -7,129 +7,134 @@
 
 // HEADER
 
-.rate-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 10%;
-}
+.rate{
+  
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10%;
 
-.rate-header-btn {
-  display: flex;
-  width: auto;
-  height: 60%;
-  position: relative;
-  border: 0;
-  background: transparent;
+    &-btn {
+      display: flex;
+      width: auto;
+      height: 60%;
+      position: relative;
+      border: 0;
+      background: transparent;
+    
+      &:active, &:focus{
+        outline: none;
+      }
+    }
+  
+    &-images{
+      height: 100%;
+      width: auto;
+    }
 
-  &:active, &:focus{
+    &-level{
+      font-size: 1.5rem;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+  
+    &__headerimage {
+      width: auto;
+      margin: -20px 0 10px 0;
+      max-height: 50vh;
+      border-radius: 5px;
+    }
+  
+    &__metadata {
+      height: 85px;
+      
+      h1{
+        font-size: 1.6rem;
+      }
+  
+      h2{
+        font-size: 1.2rem;
+      }
+    }
+  
+    &__title {
+      text-align: center;
+    }
+  
+    &__year {
+      text-align: center;
+    }
+  
+  }
+
+  &-buttons {
+    display: flex;
+    justify-content: space-between;
+    height: 20%;
+    max-width: 500px;
+    width: 90%;
+    align-items: center;
+  }
+  
+  &-button {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 58%;
+    background: #7F0000 !important;
+    border-radius: 20px;
+    border: 0;
     outline: none;
+    margin: 0 10px;
+    box-sizing: border-box;
+  
+    &:active, &:focus{
+      outline: none;
+    }
+  
+    &__not-watched{
+      font-size: 1.0rem;
+  
+      @media screen and (min-width: $screen-sm) {
+        font-size: 1.3rem;
+      }
+  
+      @media screen and (min-width: $screen-sm) {
+        font-size: 2rem;
+      }
+      
+    }
+  }
+  
+  &-images{
+    width: auto;
+    height: 80%;
   }
 }
 
-.rate-header-images{
-  height: 100%;
-  width: auto;
-}
 
 #recommend-btn{
   width: auto;
   height: 90% !important;
 }
 
-.recommend-disabled{
-  opacity: 0.4;
-}
-
-.recommend-enabled{
-  opacity: 1;
-}
-
-// CONTENT
-
-.rate-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 70%;
-
-  &__headerimage {
-    width: auto;
-    margin: -20px 0 10px 0;
-    max-height: 50vh;
-    border-radius: 5px;
+.recommend{
+  &-disabled{
+    opacity: 0.4;
   }
 
-  &__metadata {
-    height: 85px;
-    
-    h1{
-      font-size: 1.6rem;
-    }
-
-    h2{
-      font-size: 1.2rem;
-    }
-  }
-
-  &__title {
-    text-align: center;
-  }
-
-  &__year {
-    text-align: center;
-  }
-
-}
-
-// BUTTONS
-
-.rate-buttons {
-  display: flex;
-  justify-content: space-between;
-  height: 20%;
-  max-width: 500px;
-  width: 90%;
-  align-items: center;
-}
-
-.rate-button {
-  width: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 58%;
-  background: #7F0000 !important;
-  border-radius: 20px;
-  border: 0;
-  outline: none;
-  margin: 0 10px;
-  box-sizing: border-box;
-
-  &:active, &:focus{
-    outline: none;
-  }
-
-  &__not-watched{
-    font-size: 1.0rem;
-
-    @media screen and (min-width: $screen-sm) {
-      font-size: 1.3rem;
-    }
-
-    @media screen and (min-width: $screen-sm) {
-      font-size: 2rem;
-    }
-    
+  &-enabled{
+    opacity: 1;
   }
 }
 
-.rate-images{
-  width: auto;
-  height: 80%;
-}
-
-@import "Modal/modal";

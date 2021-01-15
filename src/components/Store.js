@@ -150,10 +150,10 @@ const store = new Vuex.Store({
 
       if (typeof(nextRecommendation) === 'undefined'){
         nextRecommendation = {
-          "movieName": "You covered all our database :)",
+          "movieName": "",
           "movieYear": "",
-          "movieId": "-1",
-          "movieImage": "https://www.actbus.net/fleetwiki/images/8/84/Noimage.jpg"
+          "movieId": -1,
+          "movieImage": ""
         };
       }
 

@@ -11,7 +11,6 @@
         <div class="user-form">
           <div class="form__group">
             <label class="user-form__label">Username</label>
-            <!-- <input type="text" class="form__input user-form__input" id="user-name" name="user-name" maxlength="30" :placeholder="userName" @keyup="processName"> -->
             <Dropdown :options="localUsers" v-on:selected="validateSelection" :name="userName" :placeholder="userName" v-on:filter="processName">
           </Dropdown>
           </div>
