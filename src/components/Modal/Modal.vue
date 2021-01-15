@@ -16,6 +16,7 @@
 
         props: {
             'message': "",
+            "callback": { type: Function }
         },
 
         data: () => ({
@@ -29,6 +30,7 @@
             },
             close() {
                 this.active = false;
+                this.callback();
             },
         },
 
