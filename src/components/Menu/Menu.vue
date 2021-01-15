@@ -19,7 +19,7 @@
 
         <div class="menu-buttons">
           <button type="button" class="btn-menu" v-bind:disabled="startDisabled" v-on:click="startRate">
-            Random Movie
+            Rate Movies
           </button>
           <button type="button" class="btn-menu" v-on:click="showRatings">
             History

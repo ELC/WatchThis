@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import AppData from './AppData';
 import RandomUserName from '../data/randomUsername';
+import Recommendation from '../data/recommend'
 import {db} from '../firebase';
 
 Vue.use(Vuex);
@@ -19,6 +20,8 @@ const store = new Vuex.Store({
     appReady: AppData.isReady(),
     ratings: [],
     visited: [],
+    recommended: [],
+    nextRecommendation: null,
 
     // App states
     showMainMenu: true,
@@ -93,8 +96,54 @@ const store = new Vuex.Store({
       this.commit('showOnlyView', "showRate");
     }, 
 
+    addRecommendation (state, movieIds) {
+      movieIds.forEach(movieId => {
+        let data = AppData.getById(movieId);
+        let movie = {
+          "movieName": data[1],
+          "movieYear": data[0],
+          "movieId": data[2],
+          "movieImage": data[3]
+        };
+
+        let alreadyWatched = state.ratings.filter(rating => rating.userId === state.userName)
+                                          .map(rating => rating.movieId)
+                                          .includes(movie.movieId);
+        console.log(alreadyWatched)
+        if (!alreadyWatched){
+          state.recommended.push(movie)
+        }
+        
+      });
+      this.commit('nextRecommendation');
+    }, 
+
+    nextRecommendation (state) {
+      let nextRecommendation = state.recommended.shift();
+
+      if (typeof(nextRecommendation) === 'undefined'){
+        nextRecommendation = {
+          "movieName": "You covered all our database :)",
+          "movieYear": "",
+          "movieId": "-1",
+          "movieImage": "https://www.actbus.net/fleetwiki/images/8/84/Noimage.jpg"
+        };
+      }
+
+      state.nextRecommendation = nextRecommendation
+    }, 
+
+    rateMovie (state, movie) {
+      this.commit('showRate');
+      this.commit('nextRecommendation');
+      state.movie = movie;
+    },
+
     startRate (state) {
-      this.commit('showRate')
+      this.commit('showRate');
+      Recommendation.getRecommendationByUser(state.userName)
+                    .then(response => response.json())
+                    .then(data => this.commit('addRecommendation', data[state.userName]))
       this.commit('initRatings');
     },
 

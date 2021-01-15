@@ -15,8 +15,12 @@
       return WatchThisData.getNumber();
     },
 
+    getById(movieId){
+      return WatchThisData.getById(movieId);
+    },
+
     isReady(){
       return WatchThisData.getNumber() !== 0;
-    }
+    },
   };
 </script>

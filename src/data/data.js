@@ -6,6 +6,10 @@ export default class WatchThisData {
     return data.length;
   };
 
+  static getById(movieId) {
+    return data.filter(movie => movie[2] === movieId)[0]
+  }
+
   static getRandom(skipIds) {
     var movie;
     

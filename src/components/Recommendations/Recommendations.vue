@@ -13,11 +13,11 @@
 
         <h2 class="recommendations-text">We recommend you</h2>
 
-        <img class="recommendations-content__headerimage" src="https://images-na.ssl-images-amazon.com/images/I/51MJQKcJVFL._AC_.jpg">
+        <img class="recommendations-content__headerimage" :src="getMovie.movieImage">
         
         <div class="recommendations-content__metadata">
-          <h1 class="recommendations-content__title">Ratatouille</h1>
-          <h2 class="recommendations-content__year">2007</h2>
+          <h1 class="recommendations-content__title">{{ getMovie.movieName }}</h1>
+          <h2 class="recommendations-content__year">{{ getMovie.movieYear }}</h2>
         </div>
       </div>
 
@@ -43,25 +43,19 @@
       showRecommendations () {
         return this.$store.state.showRecommendations
       },
+      getMovie () {
+        return this.$store.state.nextRecommendation;
+      },
     },
     methods: {
       showRate () {
-        this.$store.commit('showRate')
-      },
-      getMovieImage () {
-        return this.$store.state.movie.movieImage;
-      },
-      getMovieName () {
-        return this.$store.state.movie.movieName;
-      },
-      getMovieYear () {
-        return this.$store.state.movie.movieYear;
+        this.$store.commit('showRate');
       },
       recommendNextMovie (){
-
+        this.$store.commit('nextRecommendation')
       },
       rateThisMovie (){
-        
+        this.$store.commit('rateMovie', this.getMovie);
       }
     }
   };
