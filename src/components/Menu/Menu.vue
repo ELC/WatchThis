@@ -5,14 +5,20 @@
       <div class="container">
 
         <div class="logo">
+          <img class="logo__headerimage" src="@/assets/logo.svg">
           <h1 class="logo__headline">Watch This!</h1>
         </div>
         
         <div class="user-form">
           <div class="form__group">
             <label class="user-form__label">Username</label>
-            <Dropdown :options="localUsers" v-on:selected="validateSelection" :name="userName" :placeholder="userName" v-on:filter="processName">
-          </Dropdown>
+            <Dropdown :options="localUsers" 
+                      :name="userName" 
+                      :placeholder="userName" 
+                      v-on:selected="validateSelection" 
+                      v-on:filter="processName"
+                      >
+            </Dropdown>
           </div>
         </div>
 
