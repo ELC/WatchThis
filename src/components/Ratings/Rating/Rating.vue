@@ -7,8 +7,6 @@
 </template>
 
 <script>
-  import AppData from '../../AppData';
-
   export default {
     name: 'Rating',
     props: ['rating'],

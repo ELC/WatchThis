@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import AppData from './AppData';
+import WatchThisData from '../data/movies';
 import RandomUserName from '../data/randomUsername';
 import Recommendation from '../data/recommend'
 import {db} from '../firebase';
@@ -10,14 +10,15 @@ Vue.use(Vuex);
 // Create the game store
 const store = new Vuex.Store({
   state: {
-    movie: AppData.getRandomMovie([]),
-    nextMovie: AppData.getRandomMovie([]),
+    movie: WatchThisData.getRandomMovie([]),
+    nextMovie: WatchThisData.getRandomMovie([]),
     allMoviesCovered: false,
 
     // General game data
     userName: RandomUserName.getRandomUserName(),
+    userLevel: 0,
     userReady: true,
-    appReady: AppData.isReady(),
+    appReady: WatchThisData.isReady(),
     ratings: [],
     visited: [],
     recommended: [],
@@ -35,7 +36,7 @@ const store = new Vuex.Store({
     // Global
 
     appReady(state){
-      state.appReady = AppData.isReady() && state.userReady;
+      state.appReady = WatchThisData.isReady() && state.userReady;
     },
 
 
@@ -98,7 +99,7 @@ const store = new Vuex.Store({
 
     addRecommendation (state, movieIds) {
       movieIds.forEach(movieId => {
-        let data = AppData.getById(movieId);
+        let data = WatchThisData.getById(movieId);
         let movie = {
           "movieName": data[1],
           "movieYear": data[0],
@@ -173,8 +174,8 @@ const store = new Vuex.Store({
 
       let skipWithoutDuplicates = new Set(skipIds.concat(state.visited));
 
-      if (skipWithoutDuplicates.size < AppData.getLength()){
-        state.nextMovie = AppData.getRandomMovie(Array.from(skipWithoutDuplicates.values()));
+      if (skipWithoutDuplicates.size < WatchThisData.getLength()){
+        state.nextMovie = WatchThisData.getRandomMovie(Array.from(skipWithoutDuplicates.values()));
         return;
       }
 

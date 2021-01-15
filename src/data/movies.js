@@ -2,15 +2,15 @@ let data = require('../../public/top_movies.json')['data'];
 
 export default class WatchThisData {
 
-  static getNumber(){
+  static getLength(){
     return data.length;
   };
 
   static getById(movieId) {
     return data.filter(movie => movie[2] === movieId)[0]
-  }
+  };
 
-  static getRandom(skipIds) {
+  static getRandomMovie(skipIds) {
     var movie;
     
     do {
@@ -30,7 +30,7 @@ export default class WatchThisData {
     return movie
   };
 
-  static getRecommended(user) {
-    console.error("NOT IMPLEMENTED");
-  }
+  static isReady(){
+    return this.getLength() !== 0;
+  };
 }
