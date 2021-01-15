@@ -70,8 +70,6 @@ const store = new Vuex.Store({
       let negative_rated = rated_movies.filter(rating => rating.rating === -1).length;
       let rated_total = rated_movies.length;
 
-      console.log("positive")
-      console.log(positive_rated)
       if (positive_rated >= 15 && negative_rated >= 15 && rated_total >= 50){
         state.userLevel = 3;
         return;
@@ -136,7 +134,7 @@ const store = new Vuex.Store({
         let alreadyWatched = state.ratings.filter(rating => rating.userId === state.userName)
                                           .map(rating => rating.movieId)
                                           .includes(movie.movieId);
-        console.log(alreadyWatched)
+
         if (!alreadyWatched){
           state.recommended.push(movie)
         }
@@ -234,8 +232,6 @@ const store = new Vuex.Store({
       if (globalRatings === null){
         return;
       }
-
-      console.log(Object.entries(globalRatings).length)
 
       Object.entries(globalRatings)
               .map(entry => entry[1])
