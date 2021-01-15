@@ -10,27 +10,26 @@ suggestions_url = "https://raw.githubusercontent.com/ELC/WatchThis/master/data/s
 SUGGESTIONS = requests.get(suggestions_url).json()
 
 
-@app.get("/")
-async def root():
-    return "Nothing to Look Here"
-
-
 @app.get("/recommend/{user_id}")
 async def get_recommend(user_id):
     global RECOMMENDATIONS
 
-    if user_id not in RECOMMENDATIONS:
-        return  {user_id: []}
+    response = {user_id: []}
 
-    return {user_id: RECOMMENDATIONS[user_id]}
+    if user_id in RECOMMENDATIONS:
+        response[user_id] = RECOMMENDATIONS[user_id]
+
+    return response
 
 
 @app.get("/suggest/{user_id}")
 async def get_recommend(user_id):
     global SUGGESTIONS
 
-    if user_id not in RECOMMENDATIONS:
-        return  {user_id: []}
+    response = {user_id: []}
 
-    return {user_id: SUGGESTIONS[user_id]} 
+    if user_id in SUGGESTIONS:
+        response[user_id] = SUGGESTIONS[user_id]
+
+    return response
 
