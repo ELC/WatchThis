@@ -1,5 +1,5 @@
 <template>
-    <div class="modal" :class="active ? 'open' : 'closed'" @click="close()">
+    <div class="modal" :class="active || alwaysvisible ? 'open' : 'closed'" @click="close()">
     
         <div class="card">
     
@@ -16,7 +16,8 @@
 
         props: {
             'message': "",
-            "callback": { type: Function }
+            "callback": { type: Function, default: () => 1, },
+            "alwaysvisible": false
         },
 
         data: () => ({

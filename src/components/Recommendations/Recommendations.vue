@@ -11,6 +11,11 @@
 
 
       <Modal message="Keep Rating to Unlock More Recommendations Tomorrow" :callback="showRate"></Modal>
+      <Modal message="Keep Rating to Unlock More Recommendations Tomorrow" 
+            :callback="showRate" 
+            :alwaysvisible="true"
+            v-if="getMovie.movieId === -1">
+      </Modal>
 
       <div class="recommendations-content" v-if="getMovie.movieId !== -1">
 
