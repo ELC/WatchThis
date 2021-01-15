@@ -65,7 +65,7 @@ import Dropdown from 'vue-simple-search-dropdown';
     },
     methods: {
       processName (userName) {
-        this.$store.commit('updateUser', userName);
+        this.$store.commit('updateUser', userName.toLowerCase());
       },
       startRate () {
         this.$store.commit('startRate');

@@ -4,12 +4,14 @@
     <div id="rate" class="panel" v-if="showRate">
       
       <!-- HEADER -->
+      <span class="rate-header-level">Level {{ level }}</span>
+      
       <div class="rate-header">
 
         <button type="button" class="rate-header-btn" v-bind:disabled="!showRate" v-on:click="showMenu">
           <img class="rate-header-images" src="@/assets/back_arrow.png">
         </button>
-        <span class="rate-header-level">Level {{ level }}</span>
+        
         <button type="button" class="rate-header-btn" id="recommend-btn" 
         :class="{'recommend-disabled' : !recommendationsEnabled}"  v-on:click="showRecommendations">
           <img class="rate-header-images" src="@/assets/recommend.png">
