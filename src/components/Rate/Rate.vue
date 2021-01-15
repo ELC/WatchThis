@@ -9,8 +9,7 @@
         <button type="button" class="rate-header-btn" v-bind:disabled="!showRate" v-on:click="showMenu">
           <img class="rate-header-images" src="@/assets/back_arrow.png">
         </button>
-        
-        <!-- <button type="button" class="rate-header-btn" id="recommend-btn" v-bind:disabled="!showRate" v-on:click="showRecommendations"> -->
+        <span class="rate-header-level">Level {{ level }}</span>
         <button type="button" class="rate-header-btn" id="recommend-btn" 
         :class="{'recommend-disabled' : !recommendationsEnabled}"  v-on:click="showRecommendations">
           <img class="rate-header-images" src="@/assets/recommend.png">
@@ -69,10 +68,12 @@ import Modal from '../Modal/Modal';
       getMovie () {
         return this.$store.state.movie;
       },
+      level () {
+        this.$store.commit('getUserLevel');
+        return this.$store.state.userLevel;
+      },
       recommendationsEnabled (){
-        let userRatings = this.$store.state.ratings.filter(rating => rating.userId === this.$store.state.userName);
-        let positiveRatings = userRatings.filter(rating => rating.rating === 1)
-        return positiveRatings.length >= 10;
+        return this.level >= 1;
       }
     },
     methods: {

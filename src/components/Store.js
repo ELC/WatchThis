@@ -64,6 +64,32 @@ const store = new Vuex.Store({
       this.commit('showOnlyView', "showMainMenu");
     },
 
+    getUserLevel(state) {
+      let rated_movies = state.ratings.filter(rating => rating.userId === state.userName);
+      let positive_rated = rated_movies.filter(rating => rating.rating === 1).length;
+      let negative_rated = rated_movies.filter(rating => rating.rating === -1).length;
+      let rated_total = rated_movies.length;
+
+      console.log("positive")
+      console.log(positive_rated)
+      if (positive_rated >= 15 && negative_rated >= 15 && rated_total >= 50){
+        state.userLevel = 3;
+        return;
+      }
+
+      if (positive_rated >= 15 && negative_rated >= 15){
+        state.userLevel = 2;
+        return;
+      }
+      
+      if (positive_rated >= 10){
+        state.userLevel = 1;
+        return;
+      }
+
+      state.userLevel =  0;
+    },
+
 
     updateUser(state, username){
       if (typeof(username) === 'undefined'){
