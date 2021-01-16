@@ -10,14 +10,14 @@
       </div>
 
 
-      <Modal message="Keep Rating to Unlock More Recommendations Tomorrow" :callback="showRate"></Modal>
-      <Modal message="Keep Rating to Unlock More Recommendations Tomorrow" 
-            :callback="showRate" 
+      <Modal message="Keep Rating to Unlock More Recommendations Tomorrow" :callback="resetAndRate"></Modal>
+      <Modal message="Personalized Recommendations will be ready for you in an hour :)" 
+            :callback="resetAndRate" 
             :alwaysvisible="true"
-            v-if="getMovie.movieId === -1">
+            v-if="getMovie.movieId === -2">
       </Modal>
 
-      <div class="recommendations-content" v-if="getMovie.movieId !== -1">
+      <div class="recommendations-content" v-if="getMovie.movieId !== -1 && getMovie.movieId !== -2">
 
         <h2 class="recommendations-text">We recommend you</h2>
 
@@ -29,7 +29,7 @@
         </div>
       </div>
 
-      <div class="recommendations-buttons" v-if="getMovie.movieId !== -1">
+      <div class="recommendations-buttons" v-if="getMovie.movieId !== -1 && getMovie.movieId !== -2">
           <button type="button" class="recommendations-button" v-bind:disabled="!showRecommendations" v-on:click="rateThisMovie">
             Already watched? Rate it!
           </button>
@@ -61,6 +61,10 @@ import Modal from '../Modal/Modal';
     },
 
     methods: {
+      resetAndRate (){
+        this.$store.commit('resetRecommendations');
+        this.$store.commit('showRate');
+      },
       showRate () {
         this.$store.commit('showRate');
       },

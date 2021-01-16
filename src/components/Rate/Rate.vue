@@ -32,6 +32,10 @@
       </div>
       
       <Modal message="Keep Rating to Level Up and Unlock Recommendations!"></Modal>
+      <Modal message="Watch and Rate more Movies to Level Up" 
+            :callback="resetSkip"
+            :alwaysvisible="true"
+            v-if="getMovie.movieId === -1"></Modal>
 
       <!-- BUTTONS -->
       <div class="rate-buttons">
@@ -79,6 +83,10 @@ import Modal from '../Modal/Modal';
       }
     },
     methods: {
+      resetSkip (){
+        this.$store.commit('resetIgnore');
+        this.$store.commit('setNewMovie');
+      },
       showMenu () {
         this.$store.commit('showMenu');
       },

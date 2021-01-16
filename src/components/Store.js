@@ -10,8 +10,8 @@ Vue.use(Vuex);
 // Create the game store
 const store = new Vuex.Store({
   state: {
-    movie: WatchThisData.getRandomMovie([]),
-    nextMovie: WatchThisData.getRandomMovie([]),
+    movie: WatchThisData.getRandomMovieByLevel(1, []),
+    nextMovie: WatchThisData.getRandomMovieByLevel(1, []),
     allMoviesCovered: false,
 
     // General game data
@@ -70,22 +70,27 @@ const store = new Vuex.Store({
       let negative_rated = rated_movies.filter(rating => rating.rating === -1).length;
       let rated_total = rated_movies.length;
 
-      if (positive_rated >= 15 && negative_rated >= 15 && rated_total >= 50){
-        state.userLevel = 3;
+      if (positive_rated >= 75 && negative_rated >= 50 && rated_total >= 250){
+        state.userLevel = 4; // Approximately 1500-2000 movies in catalog
         return;
       }
 
-      if (positive_rated >= 15 && negative_rated >= 15){
-        state.userLevel = 2;
+      if (positive_rated >= 50 && negative_rated >= 30 && rated_total >= 100){
+        state.userLevel = 3; // Approximately 1000 movies in catalog
+        return;
+      }
+
+      if (positive_rated >= 30 && negative_rated >= 15 && rated_total >= 50){
+        state.userLevel = 2; // Approximately 500 movies in catalog
         return;
       }
       
-      if (positive_rated >= 10){
-        state.userLevel = 1;
+      if (positive_rated >= 15 && negative_rated >= 5){
+        state.userLevel = 1; // Approximately 200 movies in catalog
         return;
       }
 
-      state.userLevel =  0;
+      state.userLevel =  0; // Approximately 100 movies in catalog
     },
 
 
@@ -140,6 +145,16 @@ const store = new Vuex.Store({
         }
         
       });
+
+      if (state.recommended.length === 0){
+        state.recommended.push({
+          "movieName": "",
+          "movieYear": "",
+          "movieId": -2,
+          "movieImage": ""
+        });
+      }
+
       this.commit('nextRecommendation');
     }, 
 
@@ -164,11 +179,15 @@ const store = new Vuex.Store({
       state.movie = movie;
     },
 
-    startRate (state) {
-      this.commit('showRate');
+    resetRecommendations (state){
       Recommendation.getRecommendationByUser(state.userName)
                     .then(response => response.json())
-                    .then(data => this.commit('addRecommendation', data[state.userName]))
+                    .then(data => this.commit('addRecommendation', data[state.userName]));
+    },
+
+    startRate (state) {
+      this.commit('showRate');
+      this.commit('resetRecommendations');
       this.commit('initRatings');
     },
 
@@ -198,16 +217,16 @@ const store = new Vuex.Store({
 
       let skipWithoutDuplicates = new Set(skipIds.concat(state.visited));
 
-      if (skipWithoutDuplicates.size < WatchThisData.getLength()){
-        state.nextMovie = WatchThisData.getRandomMovie(Array.from(skipWithoutDuplicates.values()));
+      if (skipWithoutDuplicates.size < WatchThisData.getLengthByLevel(state.userLevel)){
+        state.nextMovie = WatchThisData.getRandomMovieByLevel(state.userLevel, Array.from(skipWithoutDuplicates.values()));
         return;
       }
 
       state.movie = {
-        "movieName": "You covered all our database :)",
+        "movieName": "You have to watch some of the movies to Unlock More :)",
         "movieYear": "",
-        "movieId": "-1",
-        "movieImage": "https://www.actbus.net/fleetwiki/images/8/84/Noimage.jpg"
+        "movieId": -1,
+        "movieImage": ""
       };
     },
 
@@ -253,6 +272,9 @@ const store = new Vuex.Store({
       this.commit("sortCleanRatings");
     },
 
+    resetIgnore (state) {
+      state.visited = [];
+    },
 
     saveRating (state, user_rating) {
       let rating = {
