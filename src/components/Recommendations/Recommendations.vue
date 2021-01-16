@@ -10,14 +10,9 @@
       </div>
 
 
-      <Modal message="Keep Rating to Unlock More Recommendations Tomorrow" :callback="resetAndRate"></Modal>
-      <Modal message="Personalized Recommendations will be Ready for You in an Hour :)" 
-            :callback="resetAndRate" 
-            :alwaysvisible="true"
-            v-if="getMovie.movieId === -2">
-      </Modal>
+      <Modal message="Keep Rating to Unlock More Recommendations" :callback="resetAndRate"></Modal>
 
-      <div class="recommendations-content" v-if="getMovie.movieId !== -1 && getMovie.movieId !== -2">
+      <div class="recommendations-content" v-if="getMovie.movieId !== -1">
 
         <h2 class="recommendations-text">We recommend you</h2>
 
@@ -29,7 +24,7 @@
         </div>
       </div>
 
-      <div class="recommendations-buttons" v-if="getMovie.movieId !== -1 && getMovie.movieId !== -2">
+      <div class="recommendations-buttons" v-if="getMovie.movieId !== -1">
           <button type="button" class="recommendations-button" v-bind:disabled="!showRecommendations" v-on:click="rateThisMovie">
             Already watched? Rate it!
           </button>

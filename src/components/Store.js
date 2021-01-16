@@ -16,13 +16,13 @@ const store = new Vuex.Store({
 
     // General game data
     userName: RandomUserName.getRandomUserName(),
-    userLevel: 0,
+    userLevel: -1,
     userReady: true,
     appReady: WatchThisData.isReady(),
     ratings: [],
     visited: [],
     recommended: [],
-    nextRecommendation: null,
+    nextRecommendation: {"movieId": -1},
 
     // App states
     showMainMenu: true,
@@ -130,6 +130,8 @@ const store = new Vuex.Store({
     }, 
 
     addRecommendation (state, movieIds) {
+      state.recommended = [];
+      
       movieIds.forEach(movieId => {
         let data = WatchThisData.getById(movieId);
         let movie = {
@@ -153,7 +155,7 @@ const store = new Vuex.Store({
         state.recommended.push({
           "movieName": "",
           "movieYear": "",
-          "movieId": -2,
+          "movieId": -1,
           "movieImage": ""
         });
       }
@@ -183,10 +185,12 @@ const store = new Vuex.Store({
     },
 
     resetRecommendations (state){
-      if (state.userLevel === 0){
+      let ratedTotal = state.ratings.filter(rating => rating.userId === state.userName).length
+
+      if (ratedTotal === 0){
         return;
       }
-
+      
       Recommendation.getRecommendationByUser(state.userName)
                     .then(response => response.json())
                     .then(data => this.commit('addRecommendation', data[state.userName]));
