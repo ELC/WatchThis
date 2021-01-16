@@ -51,6 +51,11 @@ import Modal from '../Modal/Modal';
     components:{
       Modal,
     },
+    metaInfo() {
+      return {
+        title: "Recommendations"
+      };
+    },
     computed: {
       showRecommendations () {
         return this.$store.state.showRecommendations
@@ -66,15 +71,18 @@ import Modal from '../Modal/Modal';
         this.$store.commit('showRate');
       },
       showRate () {
+        this.$analytics.logEvent("Go to Rate From Recommendation");
         this.$store.commit('showRate');
       },
       recommendNextMovie (){
+        this.$analytics.logEvent("Skip Recommendation");
         this.$store.commit('nextRecommendation')
         if (this.$store.state.nextRecommendation.movieId === -1){
           this.$emit('openModal');
         }
       },
       rateThisMovie (){
+        this.$analytics.logEvent("Already Watched Recommendations");
         this.$store.commit('rateMovie', this.getMovie);
       }
     }

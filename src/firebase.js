@@ -1,6 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
+import "firebase/analytics";
  
 const config = {
     apiKey: "AIzaSyCUHUVtEypKwat6A_ue7k5kR3AdGRvT_oc",
@@ -15,5 +16,7 @@ const config = {
  
 firebase.initializeApp(config);
 firebase.auth().signInAnonymously();
+firebase.analytics();
 
 export const db = firebase.database();
+export const analytics = firebase.analytics();

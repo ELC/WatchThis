@@ -31,6 +31,11 @@
     components: {
       Rating
     },
+    metaInfo() {
+      return {
+        title: "Ratings"
+      };
+    },
     computed: {
       showRatingPanel () {
         return this.$store.state.showRatingPanel;
@@ -44,9 +49,11 @@
     },
     methods: {
       showMenu () {
+        this.$analytics.logEvent("Go To Menu from Ratings");
         this.$store.commit('showMenu');
       },
       startRate () {
+        this.$analytics.logEvent("Go to Rate from Ratings");
         this.$store.commit('startRate');
       }
     }

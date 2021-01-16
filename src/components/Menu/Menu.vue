@@ -46,6 +46,11 @@ import Dropdown from 'vue-simple-search-dropdown';
     components: {
       Dropdown,
     },
+    metaInfo() {
+      return {
+        title: "Menu"
+      };
+    },
     computed: {
       userName (){
         return this.$store.state.userName;
@@ -74,9 +79,11 @@ import Dropdown from 'vue-simple-search-dropdown';
         this.$store.commit('updateUser', userName.toLowerCase());
       },
       startRate () {
+        this.$analytics.logEvent("Go to Rate from Menu");
         this.$store.commit('startRate');
       },
       showRatings () {
+        this.$analytics.logEvent("Go to Ratings from Menu");
         this.$store.commit('showRatings');
       },
       validateSelection (selection){

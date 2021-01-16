@@ -3,13 +3,16 @@ import Vue from 'vue';
 import store from './components/Store';
 import App from './App.vue';
 import 'es6-promise/auto';
+import {analytics} from './firebase'
 
 const VueFire = require('vuefire')
- 
+
 Vue.use(VueFire);
 
 // Config
 Vue.config.productionTip = false;
+
+Vue.prototype.$analytics = analytics;
 
 // Start the app
 new Vue({

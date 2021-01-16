@@ -67,6 +67,11 @@ import Modal from '../Modal/Modal';
     components:{
       Modal,
     },
+    metaInfo() {
+      return {
+        title: "Rate"
+      };
+    },
     computed: {
       showRate () {
         return this.$store.state.showRate;
@@ -88,22 +93,28 @@ import Modal from '../Modal/Modal';
         this.$store.commit('setNewMovie');
       },
       showMenu () {
+        this.$analytics.logEvent("Go to Menu from Rate");
         this.$store.commit('showMenu');
       },
       markSuccess () {
+        this.$analytics.logEvent("Like");
         this.$store.commit('commitSuccess');
       },
       markUnknown () {
+        this.$analytics.logEvent("Not Watched");
         this.$store.commit('commitUnknown');
       },
       markFail () {
+        this.$analytics.logEvent("Dislike");
         this.$store.commit('commitFail');
       },
       
       showRecommendations () {
+        this.$analytics.logEvent("I want Recommendations");
         if (this.recommendationsEnabled){
           this.$store.commit('showRecommendations');
         } else {
+          this.$analytics.logEvent("Level 0 Can't Watch");
           this.$emit('openModal');
         }
       }
