@@ -11,7 +11,7 @@
 
 
       <Modal message="Keep Rating to Unlock More Recommendations Tomorrow" :callback="resetAndRate"></Modal>
-      <Modal message="Personalized Recommendations will be ready for you in an hour :)" 
+      <Modal message="Personalized Recommendations will be Ready for You in an Hour :)" 
             :callback="resetAndRate" 
             :alwaysvisible="true"
             v-if="getMovie.movieId === -2">
