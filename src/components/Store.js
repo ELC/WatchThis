@@ -70,22 +70,22 @@ const store = new Vuex.Store({
       let negative_rated = rated_movies.filter(rating => rating.rating === -1).length;
       let rated_total = rated_movies.length;
 
-      if (positive_rated >= 75 && negative_rated >= 50 && rated_total >= 250){
+      if (positive_rated >= 75 && negative_rated >= 20 && rated_total >= 250){
         state.userLevel = 4; // Approximately 1500-2000 movies in catalog
         return;
       }
 
-      if (positive_rated >= 50 && negative_rated >= 30 && rated_total >= 100){
+      if (positive_rated >= 50 && negative_rated >= 10 && rated_total >= 100){
         state.userLevel = 3; // Approximately 1000 movies in catalog
         return;
       }
 
-      if (positive_rated >= 30 && negative_rated >= 15 && rated_total >= 50){
+      if (positive_rated >= 30 && negative_rated >= 5 && rated_total >= 50){
         state.userLevel = 2; // Approximately 500 movies in catalog
         return;
       }
       
-      if (positive_rated >= 15 && negative_rated >= 5){
+      if (positive_rated >= 15){
         state.userLevel = 1; // Approximately 200 movies in catalog
         return;
       }
