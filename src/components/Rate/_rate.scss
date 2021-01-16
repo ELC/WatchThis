@@ -39,6 +39,47 @@
       top: 0.5vh;
       position: absolute;
     }
+
+    &-recommend{
+      width: 45px;
+      margin-right: 2px;
+      margin-top: 5px;
+
+      &__enable{
+        margin-right: 0;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        animation-name: shake;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      @keyframes shake {
+        2%, 18% {
+          transform: translate3d(-1px, 1px, 0);
+        }
+        
+        4%, 16% {
+          transform: translate3d(1px, -1px, 0);
+        }
+      
+        6%, 10%, 14% {
+          transform: translate3d(0px, 1px, 0);
+        }
+      
+        8%, 12% {
+          transform: translate3d(1px, 0px, 0);
+        }
+      }
+
+      &__disable{
+        width: 40px;
+        margin-top: 10px;
+        opacity: 0.4;
+        filter: saturate(0);
+      }
+    }
   }
 
   &-content {
@@ -128,15 +169,5 @@
 #recommend-btn{
   width: auto;
   height: 90% !important;
-}
-
-.recommend{
-  &-disabled{
-    opacity: 0.4;
-  }
-
-  &-enabled{
-    opacity: 1;
-  }
 }
 

@@ -12,9 +12,9 @@
           <img class="rate-header-images" src="@/assets/back_arrow.png">
         </button>
         
-        <button type="button" class="rate-header-btn" id="recommend-btn" 
-        :class="{'recommend-disabled' : !recommendationsEnabled}"  v-on:click="showRecommendations">
-          <img class="rate-header-images" src="@/assets/recommend.png">
+        <button type="button" class="rate-header-btn" id="recommend-btn"  v-on:click="showRecommendations">
+          <img class="rate-header-images rate-header-recommend rate-header-recommend__enable" src="@/assets/recommend_enable.svg" v-if="recommendationsEnabled">
+          <img class="rate-header-images rate-header-recommend rate-header-recommend__disable" src="@/assets/recommend_disable.svg" v-if="!recommendationsEnabled">
         </button>
 
       </div>
