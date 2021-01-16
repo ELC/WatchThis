@@ -11,7 +11,7 @@
         
         <div class="user-form">
           <div class="form__group">
-            <label class="user-form__label">Username</label>
+            <label class="user-form__label">Your alias is:</label>
             <Dropdown :options="localUsers" 
                       :name="userName" 
                       :placeholder="userName" 
