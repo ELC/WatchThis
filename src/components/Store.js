@@ -86,6 +86,9 @@ const store = new Vuex.Store({
       }
       
       if (positive_rated >= 15){
+        if (state.userLevel === 0){
+          this.commit('resetRecommendations');
+        }
         state.userLevel = 1; // Approximately 200 movies in catalog
         return;
       }
@@ -180,6 +183,10 @@ const store = new Vuex.Store({
     },
 
     resetRecommendations (state){
+      if (state.userLevel === 0){
+        return;
+      }
+
       Recommendation.getRecommendationByUser(state.userName)
                     .then(response => response.json())
                     .then(data => this.commit('addRecommendation', data[state.userName]));
