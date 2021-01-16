@@ -8,5 +8,5 @@ module.exports = {
         template: path.resolve('index.html'),
       })]);
   },
-  publicPath: '/WatchThis/'
+  publicPath: 'https://elc.github.io/WatchThis/'
 };
