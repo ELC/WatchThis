@@ -38,5 +38,5 @@ jobs:
           git config --global user.name 'ELC'
           git config --global user.email 'elcg@gmx.com'
           git add -A
-          git commit -m "Dataset Updated - `date +'%Y-%m-%d %H:%M:%S'`"
+          git diff-index --quiet HEAD || git commit -m "Dataset Updated - `date +'%Y-%m-%d %H:%M:%S'`"
           git push
