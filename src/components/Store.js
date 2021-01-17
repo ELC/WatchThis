@@ -23,6 +23,7 @@ const store = new Vuex.Store({
     visited: [],
     recommended: [],
     nextRecommendation: {"movieId": -1},
+    isRecommended: false,
 
     // App states
     showMainMenu: true,
@@ -239,6 +240,10 @@ const store = new Vuex.Store({
         "movieId": -1,
         "movieImage": ""
       };
+    },
+
+    setRecommended (state, isRecommended){
+      state.isRecommended = isRecommended;
     },
 
     

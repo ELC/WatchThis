@@ -85,6 +85,9 @@ import Modal from '../Modal/Modal';
       },
       recommendationsEnabled (){
         return this.level >= 1;
+      },
+      recommended (){
+        return this.$store.state.isRecommended;
       }
     },
     methods: {
@@ -98,6 +101,10 @@ import Modal from '../Modal/Modal';
       },
       markSuccess () {
         this.$analytics.logEvent("Like");
+        if (this.recommended){
+          this.$analytics.logEvent("Liked Recommendations");
+          this.$store.commit('setRecommended', false);
+        }
         this.$store.commit('commitSuccess');
       },
       markUnknown () {
@@ -106,6 +113,10 @@ import Modal from '../Modal/Modal';
       },
       markFail () {
         this.$analytics.logEvent("Dislike");
+        if (this.recommended){
+          this.$analytics.logEvent("Disliked Recommendations");
+          this.$store.commit('setRecommended', false);
+        }
         this.$store.commit('commitFail');
       },
       

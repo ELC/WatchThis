@@ -79,6 +79,7 @@ import Modal from '../Modal/Modal';
       rateThisMovie (){
         this.$analytics.logEvent("Already Watched Recommendations");
         this.$store.commit('rateMovie', this.getMovie);
+        this.$store.commit('setRecommended', true);
       }
     }
   };
