@@ -148,6 +148,7 @@ const store = new Vuex.Store({
 
         if (!alreadyWatched){
           state.recommended.push(movie)
+          new Image().src = movie.movieImage; // Preload Image
         }
         
       });
