@@ -91,6 +91,16 @@
   border: 0 !important;
   outline: none !important;
   padding-left: 10px !important;
+
+  &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #222222 !important; 
+    opacity: 1; /* Firefox */
+  }
+
+  &::-ms-input-placeholder { /* Microsoft Edge */
+    color: #222222;
+    opacity: 1
+  }
 }
 
 .dropdown .dropdown-content {
