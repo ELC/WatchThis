@@ -23,6 +23,7 @@
       position: relative;
       border: 0;
       background: transparent;
+      cursor: pointer;
     
       &:active, &:focus{
         outline: none;
@@ -140,6 +141,7 @@
     outline: none;
     margin: 0 10px;
     box-sizing: border-box;
+    cursor: pointer;
   
     &:active, &:focus{
       outline: none;
