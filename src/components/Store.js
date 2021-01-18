@@ -104,9 +104,9 @@ const store = new Vuex.Store({
       }
       
       state.userReady = username.length !== 0;
+      state.userName = username;
       
       if (state.userReady){
-        state.userName = username;
         this.commit("loadRatings");
       }
     },
