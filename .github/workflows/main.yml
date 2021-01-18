@@ -2,7 +2,7 @@ name: GenerateDataset
 
 on:
   schedule:
-    - cron:  '*/5 * * * *'
+    - cron:  '0 0-23/2 * * *'
 
   workflow_dispatch:
   repository_dispatch:
