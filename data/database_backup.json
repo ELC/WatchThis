@@ -39873,5 +39873,197 @@
         "timestamp": 1611187576707,
 
         "userId": ""
+    },
+
+    "-MR_SD515Hj95xyNjvr4": {
+        "movieId": "tt1408101",
+
+        "movieName": "Star Trek Into Darkness",
+
+        "rating": 1,
+
+        "timestamp": 1611241153001,
+
+        "userId": "soft_tiny66"
+    },
+
+    "-MR_SE2m_9ljQHlDFy-r": {
+        "movieId": "tt1375666",
+
+        "movieName": "Inception",
+
+        "rating": 1,
+
+        "timestamp": 1611241156971,
+
+        "userId": "soft_tiny66"
+    },
+
+    "-MR_SEIcU-iq7fPPHkEO": {
+        "movieId": "tt0120689",
+
+        "movieName": "The Green Mile",
+
+        "rating": 1,
+
+        "timestamp": 1611241157985,
+
+        "userId": "soft_tiny66"
+    },
+
+    "-MR_SE_QD9lSfaKPpQD-": {
+        "movieId": "tt0338013",
+
+        "movieName": "Eternal Sunshine of the Spotless Mind",
+
+        "rating": 1,
+
+        "timestamp": 1611241159125,
+
+        "userId": "soft_tiny66"
+    },
+
+    "-MR_SFi3b-ulTFC_ezaS": {
+        "movieId": "tt0848228",
+
+        "movieName": "The Avengers",
+
+        "rating": 1,
+
+        "timestamp": 1611241163763,
+
+        "userId": "soft_tiny66"
+    },
+
+    "-MR_SGf65oh7gnfvaC55": {
+        "movieId": "tt0211915",
+
+        "movieName": "Am\u00e9lie",
+
+        "rating": -1,
+
+        "timestamp": 1611241167680,
+
+        "userId": "soft_tiny66"
+    },
+
+    "-MR_SIQjWN3y5gJyiXIl": {
+        "movieId": "tt1392190",
+
+        "movieName": "Mad Max: Fury Road",
+
+        "rating": -1,
+
+        "timestamp": 1611241174875,
+
+        "userId": "soft_tiny66"
+    },
+
+    "-MR_SImF5QUlaLxfnrMk": {
+        "movieId": "tt4633694",
+
+        "movieName": "Spider-Man: Into the Spider-Verse",
+
+        "rating": 1,
+
+        "timestamp": 1611241176329,
+
+        "userId": "soft_tiny66"
+    },
+
+    "-MR_UcjxysUPaO9zZrHW": {
+        "movieId": "tt1049413",
+
+        "movieName": "Up",
+
+        "rating": 1,
+
+        "timestamp": 1611241786471,
+
+        "userId": "soft_tiny66"
+    },
+
+    "-MR_Ud7rrIM2aVsqFQY2": {
+        "movieId": "tt4154796",
+
+        "movieName": "Avengers: Endgame",
+
+        "rating": 1,
+
+        "timestamp": 1611241788080,
+
+        "userId": "soft_tiny66"
+    },
+
+    "-MR_UdzJN5qFTQmVBC8Y": {
+        "movieId": "tt1201607",
+
+        "movieName": "Harry Potter and the Deathly Hallows: Part 2",
+
+        "rating": 1,
+
+        "timestamp": 1611241791553,
+
+        "userId": "soft_tiny66"
+    },
+
+    "-MR_Uj2MTBnemO_nkbR3": {
+        "movieId": "tt0910970",
+
+        "movieName": "WALL\u00b7E",
+
+        "rating": 1,
+
+        "timestamp": 1611241812290,
+
+        "userId": "soft_tiny66"
+    },
+
+    "-MR_UjYvEwlMQRgN5s2i": {
+        "movieId": "tt0172495",
+
+        "movieName": "Gladiator",
+
+        "rating": 1,
+
+        "timestamp": 1611241814388,
+
+        "userId": "soft_tiny66"
+    },
+
+    "-MR_UkitBIt-kkqp-fRa": {
+        "movieId": "tt2084970",
+
+        "movieName": "The Imitation Game",
+
+        "rating": 1,
+
+        "timestamp": 1611241819174,
+
+        "userId": "soft_tiny66"
+    },
+
+    "-MR_UlACbQT9PBZkTWVN": {
+        "movieId": "tt0325980",
+
+        "movieName": "Pirates of the Caribbean: The Curse of the Black Pearl",
+
+        "rating": -1,
+
+        "timestamp": 1611241820998,
+
+        "userId": "soft_tiny66"
+    },
+
+    "-MR_UmGkXN2aVQOBz3qT": {
+        "movieId": "tt0892769",
+
+        "movieName": "How to Train Your Dragon",
+
+        "rating": -1,
+
+        "timestamp": 1611241825502,
+
+        "userId": "soft_tiny66"
     }
 }
