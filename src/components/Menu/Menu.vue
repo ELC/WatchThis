@@ -76,7 +76,7 @@ import Dropdown from 'vue-simple-search-dropdown';
     },
     methods: {
       processName (userName) {
-        this.$store.commit('updateUser', userName.toLowerCase());
+        this.$store.commit('updateUser', userName.name.toLowerCase());
       },
       startRate () {
         this.$analytics.logEvent("Go to Rate from Menu");
@@ -86,8 +86,8 @@ import Dropdown from 'vue-simple-search-dropdown';
         this.$analytics.logEvent("Go to Ratings from Menu");
         this.$store.commit('showRatings');
       },
-      validateSelection (selection){
-        this.$store.commit('updateUser', selection.name);
+      validateSelection (userName){
+        this.$store.commit('updateUser', userName.name.toLowerCase());
       }
     }
   };
