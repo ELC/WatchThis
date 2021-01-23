@@ -30,6 +30,6 @@ export default class RandomUserName {
             username = `${adjective}_${name}${suffix}`;
         } while (username.length >= 13);
 
-        return username
+        return username.trim().toLowerCase();
     };
 }

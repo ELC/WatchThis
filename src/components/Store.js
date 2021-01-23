@@ -99,10 +99,10 @@ const store = new Vuex.Store({
 
 
     updateUser(state, username){
-      if (typeof(username) === 'undefined'){
-        return;
+      if (typeof(username) === 'undefined' || this.userName === username){
+          return;
       }
-      
+
       state.userReady = username.length !== 0;
       state.userName = username;
       

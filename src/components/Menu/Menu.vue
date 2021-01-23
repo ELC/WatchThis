@@ -76,7 +76,10 @@ import Dropdown from 'vue-simple-search-dropdown';
     },
     methods: {
       processName (userName) {
-        this.$store.commit('updateUser', userName.name.toLowerCase());
+        if (typeof(userName) === 'undefined' || this.userName === userName || userName === ""){
+          return;
+        }
+        this.$store.commit('updateUser', userName);
       },
       startRate () {
         this.$analytics.logEvent("Go to Rate from Menu");
@@ -87,7 +90,10 @@ import Dropdown from 'vue-simple-search-dropdown';
         this.$store.commit('showRatings');
       },
       validateSelection (userName){
-        this.$store.commit('updateUser', userName.name.toLowerCase());
+        if (typeof(userName.name) === 'undefined' || this.userName === userName.name || userName.name === ""){
+          return;
+        }
+        this.$store.commit('updateUser', userName.name);
       }
     }
   };
