@@ -40425,5 +40425,653 @@
         "timestamp": 1611326318040,
 
         "userId": ""
+    },
+
+    "-MRfVLLwUUIEXabqmI0N": {
+        "movieId": "tt1156398",
+
+        "movieName": "Zombieland",
+
+        "rating": 1,
+
+        "timestamp": 1611342636566,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfVNT7l3K_RwcJbXa9": {
+        "movieId": "tt0848228",
+
+        "movieName": "The Avengers",
+
+        "rating": 1,
+
+        "timestamp": 1611342645217,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfVPjPaKCO30vuXp3A": {
+        "movieId": "tt4154796",
+
+        "movieName": "Avengers: Endgame",
+
+        "rating": 1,
+
+        "timestamp": 1611342654515,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfVR8GNzSdM3Ic-CSf": {
+        "movieId": "tt1663202",
+
+        "movieName": "The Revenant",
+
+        "rating": 1,
+
+        "timestamp": 1611342660266,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfVS1LUtSo-ASCfGTe": {
+        "movieId": "tt0364569",
+
+        "movieName": "Oldboy",
+
+        "rating": -1,
+
+        "timestamp": 1611342663924,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfVSQ2n-A3M1DYjisD": {
+        "movieId": "tt0382932",
+
+        "movieName": "Ratatouille",
+
+        "rating": 1,
+
+        "timestamp": 1611342665505,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfVTpCfWLuB94bjIE4": {
+        "movieId": "tt0117951",
+
+        "movieName": "Trainspotting",
+
+        "rating": -1,
+
+        "timestamp": 1611342671270,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfVUDEGA54xi7rP_ZV": {
+        "movieId": "tt1727824",
+
+        "movieName": "Bohemian Rhapsody",
+
+        "rating": 1,
+
+        "timestamp": 1611342672877,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfVWR5y-xb6eBVjaBr": {
+        "movieId": "tt0395169",
+
+        "movieName": "Hotel Rwanda",
+
+        "rating": -1,
+
+        "timestamp": 1611342681951,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfVZMPlXm2SBJZZg2c": {
+        "movieId": "tt0172495",
+
+        "movieName": "Gladiator",
+
+        "rating": 1,
+
+        "timestamp": 1611342693939,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfV_Qnt194Hl-z1jr0": {
+        "movieId": "tt1856101",
+
+        "movieName": "Blade Runner 2049",
+
+        "rating": 1,
+
+        "timestamp": 1611342698316,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfVabnzayMgY16OMpb": {
+        "movieId": "tt1392214",
+
+        "movieName": "Prisoners",
+
+        "rating": -1,
+
+        "timestamp": 1611342703180,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfVav01rq8HSfLWuCn": {
+        "movieId": "tt0317705",
+
+        "movieName": "The Incredibles",
+
+        "rating": 1,
+
+        "timestamp": 1611342704416,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfVbd6CxLO9KCr-EWZ": {
+        "movieId": "tt1979320",
+
+        "movieName": "Rush",
+
+        "rating": 1,
+
+        "timestamp": 1611342707365,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfVid3mCiVpQF11eLZ": {
+        "movieId": "tt0211915",
+
+        "movieName": "Am\u00e9lie",
+
+        "rating": -1,
+
+        "timestamp": 1611342736029,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfVj4C2M0Itp5mhzST": {
+        "movieId": "tt0120382",
+
+        "movieName": "The Truman Show",
+
+        "rating": 1,
+
+        "timestamp": 1611342737835,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfVjPbq6WrS06VgZu2": {
+        "movieId": "tt0450259",
+
+        "movieName": "Blood Diamond",
+
+        "rating": 1,
+
+        "timestamp": 1611342739205,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfVjj3yTz9j4yTQopD": {
+        "movieId": "tt0118799",
+
+        "movieName": "Life Is Beautiful",
+
+        "rating": 1,
+
+        "timestamp": 1611342740515,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfVk24Xm6QlzgaMF8f": {
+        "movieId": "tt0440963",
+
+        "movieName": "The Bourne Ultimatum",
+
+        "rating": -1,
+
+        "timestamp": 1611342741795,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfVkYU4cAcHqnYCWmZ": {
+        "movieId": "tt2096673",
+
+        "movieName": "Inside Out",
+
+        "rating": 1,
+
+        "timestamp": 1611342743869,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfVloDrBK3RJPixU01": {
+        "movieId": "tt0468569",
+
+        "movieName": "The Dark Knight",
+
+        "rating": 1,
+
+        "timestamp": 1611342749031,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfVmgK_6gVr8S9ovu0": {
+        "movieId": "tt0167404",
+
+        "movieName": "The Sixth Sense",
+
+        "rating": 1,
+
+        "timestamp": 1611342752627,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfVoeghRAHmy20bvbr": {
+        "movieId": "tt0120630",
+
+        "movieName": "Chicken Run",
+
+        "rating": 1,
+
+        "timestamp": 1611342760713,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfekwLwROGn3DNlocW": {
+        "movieId": "tt0440963",
+
+        "movieName": "The Bourne Ultimatum",
+
+        "rating": 1,
+
+        "timestamp": 1611345366907,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfelIADSide9O-ur69": {
+        "movieId": "tt0372784",
+
+        "movieName": "Batman Begins",
+
+        "rating": 1,
+
+        "timestamp": 1611345368372,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfemyE35WOWX9cEASq": {
+        "movieId": "tt3501632",
+
+        "movieName": "Thor: Ragnarok",
+
+        "rating": -1,
+
+        "timestamp": 1611345375224,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfenDgJFYiz_jR_TN7": {
+        "movieId": "tt1049413",
+
+        "movieName": "Up",
+
+        "rating": 1,
+
+        "timestamp": 1611345376276,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfeoXeGJpj_bKJ4DGi": {
+        "movieId": "tt0840361",
+
+        "movieName": "The Town",
+
+        "rating": 1,
+
+        "timestamp": 1611345381646,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfeozMZ5F5ypsT40Cl": {
+        "movieId": "tt0268978",
+
+        "movieName": "A Beautiful Mind",
+
+        "rating": 1,
+
+        "timestamp": 1611345383488,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfepj1Jf2GBjdgSoja": {
+        "movieId": "tt1285016",
+
+        "movieName": "The Social Network",
+
+        "rating": 1,
+
+        "timestamp": 1611345386538,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfeqWXCv4V1CJbT-vr": {
+        "movieId": "tt0268380",
+
+        "movieName": "Ice Age",
+
+        "rating": -1,
+
+        "timestamp": 1611345389767,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfeuXfg_s2t9lAJU1I": {
+        "movieId": "tt0120917",
+
+        "movieName": "The Emperor's New Groove",
+
+        "rating": -1,
+
+        "timestamp": 1611345406227,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRfewBq9U1nGu0AQ3PU": {
+        "movieId": "tt0268978",
+
+        "movieName": "A Beautiful Mind",
+
+        "rating": 1,
+
+        "timestamp": 1611345413020,
+
+        "userId": "front_wegg95"
+    },
+
+    "-MRgge_YXUQ2FbjtDVoU": {
+        "movieId": "tt0317705",
+
+        "movieName": "The Incredibles",
+
+        "rating": 1,
+
+        "timestamp": 1611362621497,
+
+        "userId": "Smart_tiny22"
+    },
+
+    "-MRggiUwsB1SK_hzprga": {
+        "movieId": "tt0468569",
+
+        "movieName": "The Dark Knight",
+
+        "rating": 1,
+
+        "timestamp": 1611362637528,
+
+        "userId": "Smart_tiny22"
+    },
+
+    "-MRggiusdiCzGVKhmt3z": {
+        "movieId": "tt0167260",
+
+        "movieName": "The Lord of the Rings: The Return of the King",
+
+        "rating": 1,
+
+        "timestamp": 1611362639276,
+
+        "userId": "Smart_tiny22"
+    },
+
+    "-MRggjdanIRJ9Ce9wmCx": {
+        "movieId": "tt1431045",
+
+        "movieName": "Deadpool",
+
+        "rating": 1,
+
+        "timestamp": 1611362642244,
+
+        "userId": "Smart_tiny22"
+    },
+
+    "-MRggouv9K1Kyv59uOiy": {
+        "movieId": "tt4154756",
+
+        "movieName": "Avengers: Infinity War",
+
+        "rating": 1,
+
+        "timestamp": 1611362663837,
+
+        "userId": "Smart_tiny22"
+    },
+
+    "-MRggpFX_4Q3b_mSLv5m": {
+        "movieId": "tt3315342",
+
+        "movieName": "Logan",
+
+        "rating": 1,
+
+        "timestamp": 1611362665238,
+
+        "userId": "Smart_tiny22"
+    },
+
+    "-MRggppYxO0-VkgGRjPN": {
+        "movieId": "tt0264464",
+
+        "movieName": "Catch Me If You Can",
+
+        "rating": 1,
+
+        "timestamp": 1611362667607,
+
+        "userId": "Smart_tiny22"
+    },
+
+    "-MRggs68Bq1nglaFXjS3": {
+        "movieId": "tt0120382",
+
+        "movieName": "The Truman Show",
+
+        "rating": 1,
+
+        "timestamp": 1611362676907,
+
+        "userId": "Smart_tiny22"
+    },
+
+    "-MRggtYeWRHsbAs7Npr0": {
+        "movieId": "tt7286456",
+
+        "movieName": "Joker",
+
+        "rating": 1,
+
+        "timestamp": 1611362682824,
+
+        "userId": "Smart_tiny22"
+    },
+
+    "-MRggvFMXyXFG77U2XaY": {
+        "movieId": "tt1345836",
+
+        "movieName": "The Dark Knight Rises",
+
+        "rating": 1,
+
+        "timestamp": 1611362689785,
+
+        "userId": "Smart_tiny22"
+    },
+
+    "-MRggvs7J3f8aVvRyxqH": {
+        "movieId": "tt0372784",
+
+        "movieName": "Batman Begins",
+
+        "rating": 1,
+
+        "timestamp": 1611362692347,
+
+        "userId": "Smart_tiny22"
+    },
+
+    "-MRggwhadYLZ6WVNMFUL": {
+        "movieId": "tt2582802",
+
+        "movieName": "Whiplash",
+
+        "rating": 1,
+
+        "timestamp": 1611362695769,
+
+        "userId": "Smart_tiny22"
+    },
+
+    "-MRggym42T7hmhrJXCjO": {
+        "movieId": "tt0133093",
+
+        "movieName": "The Matrix",
+
+        "rating": 1,
+
+        "timestamp": 1611362704231,
+
+        "userId": "Smart_tiny22"
+    },
+
+    "-MRgh-_1fG-ACEranEti": {
+        "movieId": "tt0848228",
+
+        "movieName": "The Avengers",
+
+        "rating": 1,
+
+        "timestamp": 1611362711587,
+
+        "userId": "Smart_tiny22"
+    },
+
+    "-MRgh0Cy0VaRkO4sGPfE": {
+        "movieId": "tt0325980",
+
+        "movieName": "Pirates of the Caribbean: The Curse of the Black Pearl",
+
+        "rating": 1,
+
+        "timestamp": 1611362714225,
+
+        "userId": "Smart_tiny22"
+    },
+
+    "-MRjSD2gurz0CYr49Bt-": {
+        "movieId": "tt0245429",
+
+        "movieName": "Spirited Away",
+
+        "rating": -1,
+
+        "timestamp": 1611408924211,
+
+        "userId": "lgimba"
+    },
+
+    "-MRjSJ7k5xlb3p0fj7kA": {
+        "movieId": "tt0814314",
+
+        "movieName": "Seven Pounds",
+
+        "rating": 1,
+
+        "timestamp": 1611408949121,
+
+        "userId": "lgimba"
+    },
+
+    "-MRjSMwWDGLoMSKFkBzg": {
+        "movieId": "tt0795368",
+
+        "movieName": "Death at a Funeral",
+
+        "rating": 1,
+
+        "timestamp": 1611408964712,
+
+        "userId": "lgimba"
+    },
+
+    "-MRjSSHwDXO62_jbnmh_": {
+        "movieId": "tt1570728",
+
+        "movieName": "Crazy, Stupid, Love",
+
+        "rating": 1,
+
+        "timestamp": 1611408986618,
+
+        "userId": "lgimba"
+    },
+
+    "-MRjS_kIVonV7AI42TeO": {
+        "movieId": "tt0295297",
+
+        "movieName": "Harry Potter and the Chamber of Secrets",
+
+        "rating": 1,
+
+        "timestamp": 1611409021280,
+
+        "userId": "lgimba"
+    },
+
+    "-MRjSfKQtt0o4J6kzmCF": {
+        "movieId": "tt2719848",
+
+        "movieName": "Everest",
+
+        "rating": -1,
+
+        "timestamp": 1611409044126,
+
+        "userId": "lgimba"
     }
 }
