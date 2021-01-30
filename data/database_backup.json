@@ -42717,5 +42717,281 @@
         "timestamp": 1611425116180,
 
         "userId": "glad_pip58"
+    },
+
+    "-MSFwTe7c4SM7ciMW6NV": {
+        "movieId": "tt2771200",
+
+        "movieName": "Beauty and the Beast",
+
+        "rating": 1,
+
+        "timestamp": 1611970766760,
+
+        "userId": "lgimba"
+    },
+
+    "-MSFwmzrYnKaFHz9PsHJ": {
+        "movieId": "tt0431308",
+
+        "movieName": "P.S. I Love You",
+
+        "rating": 1,
+
+        "timestamp": 1611970850064,
+
+        "userId": "lgimba"
+    },
+
+    "-MSFx2jl0DbzwLDc0-DQ": {
+        "movieId": "tt1646971",
+
+        "movieName": "How to Train Your Dragon 2",
+
+        "rating": -1,
+
+        "timestamp": 1611970918693,
+
+        "userId": "lgimba"
+    },
+
+    "-MSFxLT6MCETMac3BpDO": {
+        "movieId": "tt5095030",
+
+        "movieName": "Ant-Man and the Wasp",
+
+        "rating": 1,
+
+        "timestamp": 1611970995375,
+
+        "userId": "lgimba"
+    },
+
+    "-MSFxkZ71Cc-U-qkucDT": {
+        "movieId": "tt0478970",
+
+        "movieName": "Ant-Man",
+
+        "rating": 1,
+
+        "timestamp": 1611971102253,
+
+        "userId": "lgimba"
+    },
+
+    "-MSFxnHa5kAXVYy43M_t": {
+        "movieId": "tt1001526",
+
+        "movieName": "Megamind",
+
+        "rating": 1,
+
+        "timestamp": 1611971113411,
+
+        "userId": "lgimba"
+    },
+
+    "-MSFxr0t9mMtsJTBzmSa": {
+        "movieId": "tt1217209",
+
+        "movieName": "Brave",
+
+        "rating": 1,
+
+        "timestamp": 1611971128741,
+
+        "userId": "lgimba"
+    },
+
+    "-MSFxvwg5zyzpyW92skU": {
+        "movieId": "tt2820852",
+
+        "movieName": "Furious 7",
+
+        "rating": 1,
+
+        "timestamp": 1611971148894,
+
+        "userId": "lgimba"
+    },
+
+    "-MSFxxpUVph6qqXCfpto": {
+        "movieId": "tt0822832",
+
+        "movieName": "Marley & Me",
+
+        "rating": 1,
+
+        "timestamp": 1611971156616,
+
+        "userId": "lgimba"
+    },
+
+    "-MSG2nqrhZVDXFvWA9G1": {
+        "movieId": "tt0433035",
+
+        "movieName": "Real Steel",
+
+        "rating": 1,
+
+        "timestamp": 1611972688994,
+
+        "userId": "lgimba"
+    },
+
+    "-MSG43HT7Iw6rdeJw3vH": {
+        "movieId": "tt1343092",
+
+        "movieName": "The Great Gatsby",
+
+        "rating": 1,
+
+        "timestamp": 1611973018854,
+
+        "userId": "lgimba"
+    },
+
+    "-MSG44m98gllH8zDgH27": {
+        "movieId": "tt1677720",
+
+        "movieName": "Ready Player One",
+
+        "rating": 1,
+
+        "timestamp": 1611973024987,
+
+        "userId": "lgimba"
+    },
+
+    "-MSG45MokrIjs8Rv14q5": {
+        "movieId": "tt0119643",
+
+        "movieName": "Meet Joe Black",
+
+        "rating": 1,
+
+        "timestamp": 1611973027403,
+
+        "userId": "lgimba"
+    },
+
+    "-MSG4CkQeNfifiovY1O2": {
+        "movieId": "tt0145487",
+
+        "movieName": "Spider-Man",
+
+        "rating": -1,
+
+        "timestamp": 1611973057654,
+
+        "userId": "lgimba"
+    },
+
+    "-MSG4ITCjrBTNYJCZ3ye": {
+        "movieId": "tt0116629",
+
+        "movieName": "Independence Day",
+
+        "rating": 1,
+
+        "timestamp": 1611973081054,
+
+        "userId": "lgimba"
+    },
+
+    "-MSG4LRuH9NReztQhF6n": {
+        "movieId": "tt0414387",
+
+        "movieName": "Pride & Prejudice",
+
+        "rating": 1,
+
+        "timestamp": 1611973093247,
+
+        "userId": "lgimba"
+    },
+
+    "-MSG4YbUy8bLH-2JHzk9": {
+        "movieId": "tt0359950",
+
+        "movieName": "The Secret Life of Walter Mitty",
+
+        "rating": -1,
+
+        "timestamp": 1611973147177,
+
+        "userId": "lgimba"
+    },
+
+    "-MSG4ZXyE4EveLm8LgnO": {
+        "movieId": "tt5848272",
+
+        "movieName": "Ralph Breaks the Internet",
+
+        "rating": 1,
+
+        "timestamp": 1611973150987,
+
+        "userId": "lgimba"
+    },
+
+    "-MSG4dNAwR0L5TXnNXQP": {
+        "movieId": "tt3183660",
+
+        "movieName": "Fantastic Beasts and Where to Find Them",
+
+        "rating": -1,
+
+        "timestamp": 1611973170774,
+
+        "userId": "lgimba"
+    },
+
+    "-MSG4ql_hkNG2bXz6uDv": {
+        "movieId": "tt2194499",
+
+        "movieName": "About Time",
+
+        "rating": 1,
+
+        "timestamp": 1611973225638,
+
+        "userId": "lgimba"
+    },
+
+    "-MSG4sQ2j3CVF0SzSxLW": {
+        "movieId": "tt0800369",
+
+        "movieName": "Thor",
+
+        "rating": 1,
+
+        "timestamp": 1611973232389,
+
+        "userId": "lgimba"
+    },
+
+    "-MSG4uz7xz3NJe--uyvr": {
+        "movieId": "tt1655441",
+
+        "movieName": "The Age of Adaline",
+
+        "rating": 1,
+
+        "timestamp": 1611973242901,
+
+        "userId": "lgimba"
+    },
+
+    "-MSG4z9NbrWlfD3T3PGj": {
+        "movieId": "tt0133240",
+
+        "movieName": "Treasure Planet",
+
+        "rating": -1,
+
+        "timestamp": 1611973259996,
+
+        "userId": "lgimba"
     }
 }
