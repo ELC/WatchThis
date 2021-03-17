@@ -43101,5 +43101,113 @@
         "timestamp": 1614551314410,
 
         "userId": "waitamomentic"
+    },
+
+    "-MVzoGrysC6hQlMsbdyD": {
+        "movieId": "tt0936501",
+
+        "movieName": "Taken",
+
+        "rating": 1,
+
+        "timestamp": 1615978372084,
+
+        "userId": "lgimba"
+    },
+
+    "-MVzoHVWDE91zpBbOTuQ": {
+        "movieId": "tt0417741",
+
+        "movieName": "Harry Potter and the Half-Blood Prince",
+
+        "rating": 1,
+
+        "timestamp": 1615978374689,
+
+        "userId": "lgimba"
+    },
+
+    "-MVzoLRYJpfYBhXutvLN": {
+        "movieId": "tt1515091",
+
+        "movieName": "Sherlock Holmes: A Game of Shadows",
+
+        "rating": 1,
+
+        "timestamp": 1615978390815,
+
+        "userId": "lgimba"
+    },
+
+    "-MVzoOgO0xkCdJies88u": {
+        "movieId": "tt0317219",
+
+        "movieName": "Cars",
+
+        "rating": 1,
+
+        "timestamp": 1615978404094,
+
+        "userId": "lgimba"
+    },
+
+    "-MVzomVxfJ9WfQQpj2_x": {
+        "movieId": "tt0120903",
+
+        "movieName": "X-Men",
+
+        "rating": 1,
+
+        "timestamp": 1615978505774,
+
+        "userId": "lgimba"
+    },
+
+    "-MVzorI6Be4edJZJkNwJ": {
+        "movieId": "tt1132620",
+
+        "movieName": "The Girl with the Dragon Tattoo",
+
+        "rating": -1,
+
+        "timestamp": 1615978525384,
+
+        "userId": "lgimba"
+    },
+
+    "-MVzp55f_kz7nc0vt5Pq": {
+        "movieId": "tt0230600",
+
+        "movieName": "The Others",
+
+        "rating": 1,
+
+        "timestamp": 1615978586010,
+
+        "userId": "lgimba"
+    },
+
+    "-MVzp7vPZPgBpHJC79WA": {
+        "movieId": "tt0147800",
+
+        "movieName": "10 Things I Hate About You",
+
+        "rating": 1,
+
+        "timestamp": 1615978597584,
+
+        "userId": "lgimba"
+    },
+
+    "-MVzpHPV33CO-TVDZzO6": {
+        "movieId": "tt2543472",
+
+        "movieName": "Wonder",
+
+        "rating": 1,
+
+        "timestamp": 1615978636439,
+
+        "userId": "lgimba"
     }
 }
