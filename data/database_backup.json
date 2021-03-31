@@ -45249,5 +45249,173 @@
         "timestamp": 1617205970264,
 
         "userId": "EAR"
+    },
+
+    "-MX82zPDXe7L6NOjiRZC": {
+        "movieId": "tt1727824",
+
+        "movieName": "Bohemian Rhapsody",
+
+        "rating": 1,
+
+        "timestamp": 1617207228125,
+
+        "userId": "legal_aunt4"
+    },
+
+    "-MX838ZfSlBc09FSqK6F": {
+        "movieId": "tt0454921",
+
+        "movieName": "The Pursuit of Happyness",
+
+        "rating": 1,
+
+        "timestamp": 1617207269755,
+
+        "userId": "legal_aunt4"
+    },
+
+    "-MX839tXxII6xrpe1pN8": {
+        "movieId": "tt2948356",
+
+        "movieName": "Zootopia",
+
+        "rating": 1,
+
+        "timestamp": 1617207275188,
+
+        "userId": "legal_aunt4"
+    },
+
+    "-MX83AAHoASA4yeUndbY": {
+        "movieId": "tt2015381",
+
+        "movieName": "Guardians of the Galaxy",
+
+        "rating": 1,
+
+        "timestamp": 1617207276327,
+
+        "userId": "legal_aunt4"
+    },
+
+    "-MX83DWkN2plDQ-0CQDz": {
+        "movieId": "tt0395169",
+
+        "movieName": "Hotel Rwanda",
+
+        "rating": 1,
+
+        "timestamp": 1617207290047,
+
+        "userId": "legal_aunt4"
+    },
+
+    "-MX83FVQduzHjHFe8fSG": {
+        "movieId": "tt1028532",
+
+        "movieName": "Hachi: A Dog's Tale",
+
+        "rating": 1,
+
+        "timestamp": 1617207298154,
+
+        "userId": "legal_aunt4"
+    },
+
+    "-MX83FncGAVbNPqf6-g0": {
+        "movieId": "tt6966692",
+
+        "movieName": "Green Book",
+
+        "rating": 1,
+
+        "timestamp": 1617207299389,
+
+        "userId": "legal_aunt4"
+    },
+
+    "-MX83HDLQX_HM10SSTmJ": {
+        "movieId": "tt4154756",
+
+        "movieName": "Avengers: Infinity War",
+
+        "rating": 1,
+
+        "timestamp": 1617207305190,
+
+        "userId": "legal_aunt4"
+    },
+
+    "-MX83HoPst1oDNtrLoDF": {
+        "movieId": "tt0325980",
+
+        "movieName": "Pirates of the Caribbean: The Curse of the Black Pearl",
+
+        "rating": 1,
+
+        "timestamp": 1617207307630,
+
+        "userId": "legal_aunt4"
+    },
+
+    "-MX83JWF99Zn9W-9Nag-": {
+        "movieId": "tt0848228",
+
+        "movieName": "The Avengers",
+
+        "rating": 1,
+
+        "timestamp": 1617207314592,
+
+        "userId": "legal_aunt4"
+    },
+
+    "-MX83Lr2vPLaqyv7BNzj": {
+        "movieId": "tt7286456",
+
+        "movieName": "Joker",
+
+        "rating": -1,
+
+        "timestamp": 1617207324184,
+
+        "userId": "legal_aunt4"
+    },
+
+    "-MX83Mq-q0Kzs9bEabWE": {
+        "movieId": "tt0382932",
+
+        "movieName": "Ratatouille",
+
+        "rating": 1,
+
+        "timestamp": 1617207328208,
+
+        "userId": "legal_aunt4"
+    },
+
+    "-MX83NvVtlaz20yWtdCv": {
+        "movieId": "tt0434409",
+
+        "movieName": "V for Vendetta",
+
+        "rating": 1,
+
+        "timestamp": 1617207332656,
+
+        "userId": "legal_aunt4"
+    },
+
+    "-MX83PoIKzHUV5eWFTyH": {
+        "movieId": "tt0198781",
+
+        "movieName": "Monsters, Inc.",
+
+        "rating": 1,
+
+        "timestamp": 1617207340388,
+
+        "userId": "legal_aunt4"
     }
 }
