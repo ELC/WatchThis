@@ -47973,5 +47973,29 @@
         "timestamp": 1617578222543,
 
         "userId": "deep_squod8"
+    },
+
+    "-MXUcQHrHYtBheINmX2u": {
+        "movieId": "tt0120586",
+
+        "movieName": "American History X",
+
+        "rating": -1,
+
+        "timestamp": 1617585943323,
+
+        "userId": "agustin"
+    },
+
+    "-MXUcR2vtFMNgPOSHuZa": {
+        "movieId": "tt1028532",
+
+        "movieName": "Hachi: A Dog's Tale",
+
+        "rating": 1,
+
+        "timestamp": 1617585946467,
+
+        "userId": "agustin"
     }
 }
