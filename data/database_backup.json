@@ -47997,5 +47997,269 @@
         "timestamp": 1617585946467,
 
         "userId": "agustin"
+    },
+
+    "-MXbZ0_I5WZhhY0NSl7U": {
+        "movieId": "tt0848228",
+
+        "movieName": "The Avengers",
+
+        "rating": 1,
+
+        "timestamp": 1617718941666,
+
+        "userId": "fede"
+    },
+
+    "-MXbZ0ytJr-w_2wVbav2": {
+        "movieId": "tt0892769",
+
+        "movieName": "How to Train Your Dragon",
+
+        "rating": 1,
+
+        "timestamp": 1617718943311,
+
+        "userId": "fede"
+    },
+
+    "-MXbZ1J-5puFUw3Eygqa": {
+        "movieId": "tt1049413",
+
+        "movieName": "Up",
+
+        "rating": 1,
+
+        "timestamp": 1617718944662,
+
+        "userId": "fede"
+    },
+
+    "-MXbZ4FSqKWoX9Az_z9K": {
+        "movieId": "tt0440963",
+
+        "movieName": "The Bourne Ultimatum",
+
+        "rating": -1,
+
+        "timestamp": 1617718956723,
+
+        "userId": "fede"
+    },
+
+    "-MXbZ4ZcEFVvRz0KFOe0": {
+        "movieId": "tt4154756",
+
+        "movieName": "Avengers: Infinity War",
+
+        "rating": 1,
+
+        "timestamp": 1617718958014,
+
+        "userId": "fede"
+    },
+
+    "-MXbZ8iBvlSxLGIio0yL": {
+        "movieId": "tt0172495",
+
+        "movieName": "Gladiator",
+
+        "rating": 1,
+
+        "timestamp": 1617718975006,
+
+        "userId": "fede"
+    },
+
+    "-MXbZAGo3wlp_Ku-NdkE": {
+        "movieId": "tt0435761",
+
+        "movieName": "Toy Story 3",
+
+        "rating": -1,
+
+        "timestamp": 1617718981382,
+
+        "userId": "fede"
+    },
+
+    "-MXbZAf61D71f-P6rxII": {
+        "movieId": "tt2096673",
+
+        "movieName": "Inside Out",
+
+        "rating": 1,
+
+        "timestamp": 1617718983005,
+
+        "userId": "fede"
+    },
+
+    "-MXbZBUs3sXfkLWiriGu": {
+        "movieId": "tt1663202",
+
+        "movieName": "The Revenant",
+
+        "rating": 1,
+
+        "timestamp": 1617718986382,
+
+        "userId": "fede"
+    },
+
+    "-MXbZBpNh8p1ZSq4Qn4I": {
+        "movieId": "tt4633694",
+
+        "movieName": "Spider-Man: Into the Spider-Verse",
+
+        "rating": 1,
+
+        "timestamp": 1617718987758,
+
+        "userId": "fede"
+    },
+
+    "-MXbZDXZTDJ4KkdRtb1c": {
+        "movieId": "tt0468569",
+
+        "movieName": "The Dark Knight",
+
+        "rating": 1,
+
+        "timestamp": 1617718994741,
+
+        "userId": "fede"
+    },
+
+    "-MXbZG6ikIOz38SopMNU": {
+        "movieId": "tt0450259",
+
+        "movieName": "Blood Diamond",
+
+        "rating": 1,
+
+        "timestamp": 1617719005312,
+
+        "userId": "fede"
+    },
+
+    "-MXbZH0k_swxFFI6C1ir": {
+        "movieId": "tt1345836",
+
+        "movieName": "The Dark Knight Rises",
+
+        "rating": 1,
+
+        "timestamp": 1617719009030,
+
+        "userId": "fede"
+    },
+
+    "-MXbZHScOU6ciPiGL7PP": {
+        "movieId": "tt1375666",
+
+        "movieName": "Inception",
+
+        "rating": 1,
+
+        "timestamp": 1617719010813,
+
+        "userId": "fede"
+    },
+
+    "-MXbZKgbA-Nu4z8mTRjd": {
+        "movieId": "tt1727824",
+
+        "movieName": "Bohemian Rhapsody",
+
+        "rating": 1,
+
+        "timestamp": 1617719024054,
+
+        "userId": "fede"
+    },
+
+    "-MXbZLItxbg2CB5MV0Fa": {
+        "movieId": "tt4154796",
+
+        "movieName": "Avengers: Endgame",
+
+        "rating": 1,
+
+        "timestamp": 1617719026574,
+
+        "userId": "fede"
+    },
+
+    "-MXbZLz6YQ4GlGkg1ETn": {
+        "movieId": "tt0198781",
+
+        "movieName": "Monsters, Inc.",
+
+        "rating": -1,
+
+        "timestamp": 1617719029341,
+
+        "userId": "fede"
+    },
+
+    "-MXbZMjQqTa6U60euiAa": {
+        "movieId": "tt2015381",
+
+        "movieName": "Guardians of the Galaxy",
+
+        "rating": 1,
+
+        "timestamp": 1617719032429,
+
+        "userId": "fede"
+    },
+
+    "-MXbZO-_7vvSpGLImSo_": {
+        "movieId": "tt1454468",
+
+        "movieName": "Gravity",
+
+        "rating": 1,
+
+        "timestamp": 1617719037623,
+
+        "userId": "fede"
+    },
+
+    "-MXbZO_WIWPltwoo6vQ-": {
+        "movieId": "tt5013056",
+
+        "movieName": "Dunkirk",
+
+        "rating": -1,
+
+        "timestamp": 1617719039990,
+
+        "userId": "fede"
+    },
+
+    "-MXbZQ0mANYCtySXoRhQ": {
+        "movieId": "tt1596363",
+
+        "movieName": "The Big Short",
+
+        "rating": 1,
+
+        "timestamp": 1617719045893,
+
+        "userId": "fede"
+    },
+
+    "-MXbZR-I8m8qGhb5MlcJ": {
+        "movieId": "tt1074638",
+
+        "movieName": "Skyfall",
+
+        "rating": 1,
+
+        "timestamp": 1617719049893,
+
+        "userId": "fede"
     }
 }
