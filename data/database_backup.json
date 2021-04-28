@@ -49689,5 +49689,521 @@
         "timestamp": 1618332416380,
 
         "userId": "gray_donny22"
+    },
+
+    "-MZNtQYY0Sk3ihgITFHd": {
+        "movieId": "tt5463162",
+
+        "movieName": "Deadpool 2",
+
+        "rating": -1,
+
+        "timestamp": 1619620376365,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtR26kGodrR_I83Kq": {
+        "movieId": "tt0240772",
+
+        "movieName": "Ocean's Eleven",
+
+        "rating": -1,
+
+        "timestamp": 1619620378390,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtRMUSypV3DWuSAFX": {
+        "movieId": "tt0372784",
+
+        "movieName": "Batman Begins",
+
+        "rating": -1,
+
+        "timestamp": 1619620379694,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtR_bRIrkzCdn9TKU": {
+        "movieId": "tt1431045",
+
+        "movieName": "Deadpool",
+
+        "rating": -1,
+
+        "timestamp": 1619620380598,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtRqxXW8TKnoALFw6": {
+        "movieId": "tt0120586",
+
+        "movieName": "American History X",
+
+        "rating": -1,
+
+        "timestamp": 1619620381708,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtS6A_C_TSvusogPZ": {
+        "movieId": "tt0180093",
+
+        "movieName": "Requiem for a Dream",
+
+        "rating": 1,
+
+        "timestamp": 1619620382746,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtSPbgcH6Vx9l1Npe": {
+        "movieId": "tt0364569",
+
+        "movieName": "Oldboy",
+
+        "rating": 1,
+
+        "timestamp": 1619620383989,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtSf1T2SPD2Gcy9Iw": {
+        "movieId": "tt3315342",
+
+        "movieName": "Logan",
+
+        "rating": -1,
+
+        "timestamp": 1619620385041,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtSxa4K1BswXlauvs": {
+        "movieId": "tt2024544",
+
+        "movieName": "12 Years a Slave",
+
+        "rating": -1,
+
+        "timestamp": 1619620386228,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtTEzs9DRmgVPjFE_": {
+        "movieId": "tt2096673",
+
+        "movieName": "Inside Out",
+
+        "rating": -1,
+
+        "timestamp": 1619620387405,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtTUYp5uElgm01pL1": {
+        "movieId": "tt0816692",
+
+        "movieName": "Interstellar",
+
+        "rating": 1,
+
+        "timestamp": 1619620388401,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtTpyPJaJq6ZcUpm3": {
+        "movieId": "tt0266543",
+
+        "movieName": "Finding Nemo",
+
+        "rating": -1,
+
+        "timestamp": 1619620389836,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtUsq_RERdxnUWVrY": {
+        "movieId": "tt2119532",
+
+        "movieName": "Hacksaw Ridge",
+
+        "rating": -1,
+
+        "timestamp": 1619620394107,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtVAiirvDCzBj05fx": {
+        "movieId": "tt3659388",
+
+        "movieName": "The Martian",
+
+        "rating": -1,
+
+        "timestamp": 1619620395324,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtVXIqTt-9h9w0HNt": {
+        "movieId": "tt1675434",
+
+        "movieName": "The Intouchables",
+
+        "rating": -1,
+
+        "timestamp": 1619620396770,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtVxaGL3gM-MYGosU": {
+        "movieId": "tt0167261",
+
+        "movieName": "The Lord of the Rings: The Two Towers",
+
+        "rating": 1,
+
+        "timestamp": 1619620398516,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtWASaZEWait7wLQ_": {
+        "movieId": "tt0119217",
+
+        "movieName": "Good Will Hunting",
+
+        "rating": -1,
+
+        "timestamp": 1619620399403,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtWQbzayjsiVO656s": {
+        "movieId": "tt0116282",
+
+        "movieName": "Fargo",
+
+        "rating": 1,
+
+        "timestamp": 1619620400437,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtWdy_XZu7Jqx8aQg": {
+        "movieId": "tt1205489",
+
+        "movieName": "Gran Torino",
+
+        "rating": 1,
+
+        "timestamp": 1619620401356,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtWrB9-V_SfFDo314": {
+        "movieId": "tt0118799",
+
+        "movieName": "Life Is Beautiful",
+
+        "rating": -1,
+
+        "timestamp": 1619620402202,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtXH1_QXbyDHEN290": {
+        "movieId": "tt1504320",
+
+        "movieName": "The King's Speech",
+
+        "rating": -1,
+
+        "timestamp": 1619620403920,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtXgp-3E6DH_-MVhd": {
+        "movieId": "tt0167404",
+
+        "movieName": "The Sixth Sense",
+
+        "rating": 1,
+
+        "timestamp": 1619620405635,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtZW4mLa9nN2Z9cR0": {
+        "movieId": "tt1798709",
+
+        "movieName": "Her",
+
+        "rating": 1,
+
+        "timestamp": 1619620413066,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtZxJgQ_i6X0uXpFL": {
+        "movieId": "tt2380307",
+
+        "movieName": "Coco",
+
+        "rating": -1,
+
+        "timestamp": 1619620414882,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNt_HsKfiM-XSDs2o7": {
+        "movieId": "tt0468569",
+
+        "movieName": "The Dark Knight",
+
+        "rating": -1,
+
+        "timestamp": 1619620416262,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtaWsCu0-I7cZN4xX": {
+        "movieId": "tt2267998",
+
+        "movieName": "Gone Girl",
+
+        "rating": 1,
+
+        "timestamp": 1619620421309,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtbCRKgteX6ipCHjj": {
+        "movieId": "tt0264464",
+
+        "movieName": "Catch Me If You Can",
+
+        "rating": -1,
+
+        "timestamp": 1619620424106,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtbQ-V0aEA-mjIraq": {
+        "movieId": "tt0198781",
+
+        "movieName": "Monsters, Inc.",
+
+        "rating": -1,
+
+        "timestamp": 1619620424974,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtbfKmP004se7s77Z": {
+        "movieId": "tt0167260",
+
+        "movieName": "The Lord of the Rings: The Return of the King",
+
+        "rating": -1,
+
+        "timestamp": 1619620426018,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtbv7dz65Dj6r7tEN": {
+        "movieId": "tt1392214",
+
+        "movieName": "Prisoners",
+
+        "rating": 1,
+
+        "timestamp": 1619620427030,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtc7oqx3p2PaxXA-s": {
+        "movieId": "tt0317705",
+
+        "movieName": "The Incredibles",
+
+        "rating": -1,
+
+        "timestamp": 1619620427906,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtcOiKoJ0WJ6qEnRN": {
+        "movieId": "tt0319061",
+
+        "movieName": "Big Fish",
+
+        "rating": 1,
+
+        "timestamp": 1619620428987,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtcakQh8cgbvJzTTu": {
+        "movieId": "tt1345836",
+
+        "movieName": "The Dark Knight Rises",
+
+        "rating": -1,
+
+        "timestamp": 1619620429821,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtcpEYnK9dqdU6qK1": {
+        "movieId": "tt1130884",
+
+        "movieName": "Shutter Island",
+
+        "rating": 1,
+
+        "timestamp": 1619620430749,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtd100D0F898sd7Ul": {
+        "movieId": "tt0118715",
+
+        "movieName": "The Big Lebowski",
+
+        "rating": -1,
+
+        "timestamp": 1619620431566,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNte6_rjqDaPttLDHx": {
+        "movieId": "tt0993846",
+
+        "movieName": "The Wolf of Wall Street",
+
+        "rating": 1,
+
+        "timestamp": 1619620436010,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNteOzvDsSdbo7MK0b": {
+        "movieId": "tt1950186",
+
+        "movieName": "Ford v Ferrari",
+
+        "rating": -1,
+
+        "timestamp": 1619620437197,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNteq320EgZG4yfI2H": {
+        "movieId": "tt0120737",
+
+        "movieName": "The Lord of the Rings: The Fellowship of the Ring",
+
+        "rating": -1,
+
+        "timestamp": 1619620438993,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtfMKuA7o0s_mdRY2": {
+        "movieId": "tt1392190",
+
+        "movieName": "Mad Max: Fury Road",
+
+        "rating": -1,
+
+        "timestamp": 1619620441122,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtfbGKfWXp_Y7V7uk": {
+        "movieId": "tt0338013",
+
+        "movieName": "Eternal Sunshine of the Spotless Mind",
+
+        "rating": 1,
+
+        "timestamp": 1619620442136,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtfstfYbmezbAsnao": {
+        "movieId": "tt0363163",
+
+        "movieName": "Downfall",
+
+        "rating": -1,
+
+        "timestamp": 1619620443270,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtg961gWIQukEhQLm": {
+        "movieId": "tt1454029",
+
+        "movieName": "The Help",
+
+        "rating": -1,
+
+        "timestamp": 1619620444372,
+
+        "userId": "dry_miss99"
+    },
+
+    "-MZNtgQl-90b7C7gfhwK": {
+        "movieId": "tt2582802",
+
+        "movieName": "Whiplash",
+
+        "rating": 1,
+
+        "timestamp": 1619620445502,
+
+        "userId": "dry_miss99"
     }
 }
