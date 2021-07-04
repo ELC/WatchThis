@@ -53985,5 +53985,137 @@
         "timestamp": 1624161060064,
 
         "userId": "ale"
+    },
+
+    "-MdimbVynOMcemdE1_dF": {
+        "movieId": "tt0133093",
+
+        "movieName": "The Matrix",
+
+        "rating": 1,
+
+        "timestamp": 1625356398269,
+
+        "userId": "waitamomentic"
+    },
+
+    "-MdimdcY1DyH_jjvZyKq": {
+        "movieId": "tt1515091",
+
+        "movieName": "Sherlock Holmes: A Game of Shadows",
+
+        "rating": 1,
+
+        "timestamp": 1625356406943,
+
+        "userId": "waitamomentic"
+    },
+
+    "-MdimhndenoVSJIYXUjC": {
+        "movieId": "tt0217505",
+
+        "movieName": "Gangs of New York",
+
+        "rating": 1,
+
+        "timestamp": 1625356424033,
+
+        "userId": "waitamomentic"
+    },
+
+    "-Mdimj21XJONZQtU1mNu": {
+        "movieId": "tt2543164",
+
+        "movieName": "Arrival",
+
+        "rating": -1,
+
+        "timestamp": 1625356429128,
+
+        "userId": "waitamomentic"
+    },
+
+    "-MdimnxkvqhDC3ewL1Cy": {
+        "movieId": "tt0289879",
+
+        "movieName": "The Butterfly Effect",
+
+        "rating": 1,
+
+        "timestamp": 1625356449261,
+
+        "userId": "waitamomentic"
+    },
+
+    "-MdimqPcpIR7ZFch7lmo": {
+        "movieId": "tt0468569",
+
+        "movieName": "The Dark Knight",
+
+        "rating": 1,
+
+        "timestamp": 1625356459301,
+
+        "userId": "waitamomentic"
+    },
+
+    "-Mdimqm8m55ua0eRYsAS": {
+        "movieId": "tt0198781",
+
+        "movieName": "Monsters, Inc.",
+
+        "rating": 1,
+
+        "timestamp": 1625356460813,
+
+        "userId": "waitamomentic"
+    },
+
+    "-MdimrCq-R_myppKebPB": {
+        "movieId": "tt0246578",
+
+        "movieName": "Donnie Darko",
+
+        "rating": 1,
+
+        "timestamp": 1625356462585,
+
+        "userId": "waitamomentic"
+    },
+
+    "-Mdims-8GYGULulzc1rV": {
+        "movieId": "tt1535109",
+
+        "movieName": "Captain Phillips",
+
+        "rating": 1,
+
+        "timestamp": 1625356465794,
+
+        "userId": "waitamomentic"
+    },
+
+    "-MdimuPJm4WlnrzBunN2": {
+        "movieId": "tt1895587",
+
+        "movieName": "Spotlight",
+
+        "rating": 1,
+
+        "timestamp": 1625356475661,
+
+        "userId": "waitamomentic"
+    },
+
+    "-MdimugQUOJmhM1xn25O": {
+        "movieId": "tt1431045",
+
+        "movieName": "Deadpool",
+
+        "rating": 1,
+
+        "timestamp": 1625356476829,
+
+        "userId": "waitamomentic"
     }
 }
